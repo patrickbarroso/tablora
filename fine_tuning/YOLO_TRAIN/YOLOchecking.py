@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import os
 
 # Definir diretórios de imagens e anotações
-diretorio_imagens = '/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Certificados/img/COCO/ALL_LABS'
-diretorio_anotacoes = '/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Certificados/img/COCO/ALL_LABS/tabelas_cert.json'
+diretorio_imagens = '/ROOT_PATH/COCO/ALL_LABS'
+diretorio_anotacoes = '/ROOT_PATH/COCO/ALL_LABS/tabelas_cert.json'
 
 # Verificar se a GPU está disponível
 device = "cuda" if torch.cuda.is_available() else "cpu"
