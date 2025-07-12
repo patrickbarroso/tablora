@@ -55,11 +55,11 @@ os.makedirs(CV_DIR, exist_ok=True)
 
 
 MODELS = {
-    'YOLO-CEN01': 'yolov8n.pt',
-    'YOLO-CEN02': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/checkpoints/YOLO_LORA_CENARIO02_071125.pt',
-    'YOLO-CEN03': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/checkpoints/YOLO_LORA_CENARIO03_071125.pt',
-    'YOLO-CEN04': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/checkpoints/YOLO_LORA_CENARIO04_071125.pt',
-    'YOLO-CEN05': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/checkpoints/YOLO_LORA_CENARIO05_071125.pt'
+    'YOLO-CEN01': 'yolov11n.pt',
+    'YOLO-CEN02': '//ROOT_YOLO_LORA/checkpoints/YOLO_LORA_CENARIO02_071125.pt',
+    'YOLO-CEN03': '//ROOT_YOLO_LORA/checkpoints/YOLO_LORA_CENARIO03_071125.pt',
+    'YOLO-CEN04': '//ROOT_YOLO_LORA/checkpoints/YOLO_LORA_CENARIO04_071125.pt',
+    'YOLO-CEN05': '//ROOT_YOLO_LORA/checkpoints/YOLO_LORA_CENARIO05_071125.pt'
 }
 
 # ========================================================
