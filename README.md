@@ -4,7 +4,7 @@ TabLoRA is an integrated AI pipeline that combines two state-of-the-art models ‚
 
 ## üîç Overview
 
-We developed an integrated pipeline process using the best checkpoints generated from **YOLO** and **TATR** to create the AI-based application **TabLoRA4**.
+We developed an integrated pipeline process using the best checkpoints generated from **YOLO** and **TATR** to create the AI-based application **TabLoRA**.
 
 To deploy this pipeline in an operational environment, both models are encapsulated within a Python-based web application framework (**Flask**). The models are loaded at runtime and exposed through modular inference functions, allowing for **scalable** and **reusable integration**.
 
@@ -23,7 +23,7 @@ To deploy this pipeline in an operational environment, both models are encapsula
 ### 1. Clone the repository
 
 bash
-git clone https://github.com/your-username/TabLoRA4.git
+git clone https://github.com/your-username/TabLoRA.git
 cd TabLoRA
 
 
