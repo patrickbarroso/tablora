@@ -16,15 +16,15 @@ import time
 start_time = time.time()
 
 # Diretórios do novo dataset de tabelas
-cenario = "YOLO11n_18062025SP2_SEMLORA"
-dir_modelo_ajustado = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_TRAIN/Model/'
-arquivo_yolo_yaml = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_TRAIN/yolo.yaml'
+cenario = "YOLO11n_SEMLORA"
+dir_modelo_ajustado = '/ROOT_PATH/Model/'
+arquivo_yolo_yaml = '/ROOT_PATH/yolo.yaml'
 
 # Configuração do dispositivo
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Usando dispositivo: {device}")
 
-YOLO11N = '/home/aluno-pbarroso/yolo11n.pt'
+YOLO11N = '/ROOT_PATH/yolo11n.pt'
 
 # Passo 1: Carregar o modelo YOLO pré-treinado específico para detecção de tabelas
 try:
@@ -115,43 +115,5 @@ duration_time = (time.time() - start_time)/60
 #logging.info(f'\nDuration: {duration_time:.0f} minutes') # print the time elapsed  
 
 print(f'\nDuration: {duration_time:.0f} minutes') # print the time elapsed  
-
-'''
-print("================INICIANDO PREDIÇÃO DO MODELO=========")
-path_in = '/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Predict/LAB_04_001.jpg'
-path_img_marked_ft = '/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Predict/LAB_04_001_ft_marked.jpg'
-
-print("Iniciando predição....")
-image = Image.open(path_in)
-results = model_pre_train.predict(image)
-
-for result in results:
-    #print(result)
-    boxes = result.boxes.xyxy.tolist()
-    print("boxes ", boxes)
-
-    # Obter a imagem com as detecções desenhadas
-    img_with_detections = result.plot()  # Este método retorna uma imagem com as detecções
-
-    # Salvar a imagem resultante com as marcações
-    cv2.imwrite(path_img_marked_ft, img_with_detections)
-
-
-print("Salvando o modelo....")
-model_pre_train.export(format='torchscript', imgsz=640, save_dir=dir_modelo_ajustado)
-
-#comentado
-#salvando apenas os pesos do modelo
-print("Salvando os pesos do modelo - yolov8n_ft_pesos.pt")
-torch.save(model_pre_train.model.state_dict(), f'{dir_modelo_ajustado}/yolov8n_ft_pesos.pt')
-print("Salvando o modelo completo via export...")
-#salvando o modelo completo
-model_pre_train.export(format='torchscript', imgsz=640, save_dir=dir_modelo_ajustado)
-#Salvar o modelo completo usando PyTorch
-print("Salvando o modelo completo usando PyTorch - yolov8n_ft_full.pt")
-torch.save(model_pre_train.model, f'{dir_modelo_ajustado}/yolov8n_ft_full.pt')
-#model_pre_train.save(f'{dir_modelo_ajustado}/yolov8n_ft_full.pt')
-
-'''
 
 
