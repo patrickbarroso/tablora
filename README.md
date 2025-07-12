@@ -34,6 +34,7 @@ pip install -r requirements.txt
 
 ### 3. Project Structure
 
+```text
 TabLoRA/
 ├── app.py                  # Flask web application
 ├── models/
@@ -43,7 +44,9 @@ TabLoRA/
 │   └── saida/              # Output directory for processed images
 ├── templates/
 │   └── index.html          # Simple HTML interface
-└── README.md               # You are here
+├── README.md               # Project documentation
+└── requirements.txt        # Python dependencies
+```
 
 ### 4.Start the Flask App
 
