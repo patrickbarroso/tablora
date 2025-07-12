@@ -10,7 +10,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/main/yoloft.log"),
+        logging.FileHandler("/ROOT_PATH/yoloft.log"),
         logging.StreamHandler()
     ]
 )
@@ -18,8 +18,8 @@ logging.basicConfig(
 #iniciando marcação de tempo
 start_time = time.time()
 
-dir_modelo_ajustado = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/teste'
-arquivo_yolo_yaml = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/main/yolo.yaml'
+dir_modelo_ajustado = '/ROOT_PATH/FT_YOLO_LORA/Model/teste'
+arquivo_yolo_yaml = '/ROOT_PATH/FT_YOLO_LORA/main/yolo.yaml'
 
 # Configuração do dispositivo
 device = "cuda" if torch.cuda.is_available() else "cpu"
