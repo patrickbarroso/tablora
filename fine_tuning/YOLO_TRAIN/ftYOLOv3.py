@@ -23,14 +23,13 @@ def remover_arquivos(pasta):
             os.remove(caminho_arquivo)  # Remove o arquivo
 
 # Diretórios do novo dataset de tabelas
-arquivo_yolo_yaml = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_TRAIN/yolo.yaml'
-diretorio_imagens_tabelas = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/ALL_LABS'
-diretorio_labels = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/ALL_YOLO'
-#diretorio_rotulos_tabelas = '/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Certificados/img/COCO/ALL_LABS/JSON/tabelas_cert.json'
-diretorio_train_img = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/train/images'
-diretorio_train_labels = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/train/labels'
-diretorio_val_img = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/val/images'
-diretorio_val_labels = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/val/labels'
+arquivo_yolo_yaml = '/ROOT_PATH/yolo.yaml'
+diretorio_imagens_tabelas = '/ROOT_PATH/DATASET/ALL_LABS'
+diretorio_labels = '/ROOT_PATH/DATASET/ALL_YOLO'
+diretorio_train_img = '/ROOT_PATH/DATASET/train/images'
+diretorio_train_labels = '/ROOT_PATH/DATASET/train/labels'
+diretorio_val_img = '/ROOT_PATH/DATASET/val/images'
+diretorio_val_labels = '/ROOT_PATH/DATASET/val/labels'
 
 # Coletando todas as imagens
 images = glob.glob(diretorio_imagens_tabelas + '/*.jpg')
@@ -146,10 +145,7 @@ def avaliar_modelo(model, dataloader):
             
             all_preds.extend(preds.cpu().numpy())
             all_targets.extend(targets.cpu().numpy())
-    
-    # Aqui você pode calcular precisão, recall, F1, etc. se necessário
-    # precision = precision_score(all_targets, all_preds, average='macro')
-    # return precision
+
 
 
 # Função para exibir o conteúdo do DataLoader
@@ -178,28 +174,4 @@ def exibir_dataloader(dataloader, num_batches=3):
 
     return data_list
 
-
-#validar se os rotulos estão corretos
-# Carregar o arquivo de anotação
-#with open(diretorio_rotulos_tabelas) as f:
-#    anotacoes = json.load(f)
-
-# Verifique o conteúdo
-#print(json.dumps(anotacoes, indent=2))
-
-# Chamar a função para exibir o DataLoader
-# Carregar DataLoader com o novo dataset de tabelas
-#dataloader_tabelas = carregar_datasets(diretorio_imagens_tabelas, diretorio_rotulos_tabelas)
-#verificar o conteudo do dataloader
-#exibir_dataloader(dataloader_tabelas)
-
 modelo_tabelas_pretreinado.train(data=arquivo_yolo_yaml, epochs=50, imgsz=640)
-
-
-# Passo 5: Executar o treinamento
-#print("Treinando modelo com ajuste fino...")
-#treinar_modelo(modelo_tabelas_pretreinado, dataloader_tabelas, num_epochs=10, lr=1e-4)
-
-# Passo 6: Avaliar o modelo após ajuste fino
-# precision = avaliar_modelo(modelo_tabelas_pretreinado, dataloader_tabelas)
-# print(f"Precisão após ajuste fino: {precision:.4f}")
