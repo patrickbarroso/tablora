@@ -8,10 +8,10 @@ from pathlib import Path
 import sys
 
 # Caminho para o arquivo de configuração do dataset
-arquivo_yolo_yaml = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/main/yolo.yaml'
+arquivo_yolo_yaml = '/ROOT_YOLO_YAML/yolo.yaml'
 
 # Carrega o modelo (coloque o caminho para o modelo treinado)
-model_path = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/CV_YOLO11/results/YOLO-CEN04_trial_14_fold0/weights/best.pt'
+model_path = '/ROOT_CHECKPOINT/weights/best.pt'
 #model_path = "yolov8n.pt"
 
 # Carregar o modelo YOLO
