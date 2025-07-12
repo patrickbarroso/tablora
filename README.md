@@ -44,6 +44,10 @@ TabLoRA/
 │   └── saida/              # Output directory for processed images
 ├── templates/
 │   └── index.html          # Simple HTML interface
+├── fine-tuning/            # Extra folder with Lora fine-tuning code
+│   └── TATR/               # TATR LoRA finetuning
+│   └── YOLO_TRAIN/         # YOLO TRAIN (classic fine tuning)
+│   └── YOLO_LORA/          # YOLO LORA fine tuning
 ├── README.md               # Project documentation
 └── requirements.txt        # Python dependencies
 ```
