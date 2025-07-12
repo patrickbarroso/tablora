@@ -59,18 +59,6 @@ logger.addHandler(console_handler)
 # Funções Auxiliares
 # ========================================================
 
-'''
-class CustomTrainer(Trainer):
-    def prediction_step(self, model, inputs, prediction_loss_only, ignore_keys=None):
-        # Assegura que os rótulos estejam presentes para calcular a loss
-        labels = inputs.get("labels")
-        with torch.no_grad():
-            outputs = model(**inputs)
-            # outputs deve conter "loss" se os rótulos estiverem presentes
-            loss = outputs.get("loss")
-        # Retorna a loss para que o Trainer a agregue como "loss"
-        return loss, None, None
-'''
 def training_step(self, model, inputs):
     with autocast():
         outputs = model(**inputs)
@@ -151,13 +139,7 @@ def collate_fn(batch):
 def main():
     start_time = time.time()
 
-    # Carregue o dataset (exemplo: função load_coco_dataset deve ser definida por você)
-    # cppe5 = load_coco_dataset(output_json, IMAGENS_ALL, train_size=535, QTD_VALIDATION=30)
-    # Aqui assumimos que cppe5 é um dicionário com as chaves "train", "validation" e "test"
-    #cppe5 = load_coco_dataset(output_json, IMAGENS_ALL, train_size=535, QTD_VALIDATION=30)
-    #cppe5 = load_coco_dataset(output_json, IMAGENS_ALL, QTD_VALIDATION=20)
-
-    LORA_TARGET_MODULES = [
+    LORA_TARGET_MODULES = [ # HERE A MODULE SET CONFIGURATION FOR LORA 
     'model.encoder.layers.0.self_attn.k_proj',
     'model.encoder.layers.0.self_attn.v_proj',
     'model.encoder.layers.0.self_attn.q_proj',
@@ -202,10 +184,9 @@ def main():
     #desccenario = "FASE 2 - FINETUNING COM LORA NO MODELO TATR ORIGINAL - 50% DATASET - LORA - ENCODER/DECODER"
 
     desccenario = "FASE 1 - FINETUNING COM LORA EM MODELO TATR CLASSICO DATASET FASE 2  - LORA - ENCODER"
-    dir_out_model = f"/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/{idcenario}"
+    dir_out_model = f"/PATH_MODEL_GENERATION/{idcenario}"
     
-    MODEL_NAME = "microsoft/table-transformer-structure-recognition"
-    #MODEL_NAME = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/110225P1/checkpoint-585"
+    MODEL_NAME = "microsoft/table-transformer-structure-recognition" # OR ESPECIFIC CHECKPOINT PATH
 
     print(f" # ========================================================")
     print(f" CENÁRIO {idcenario} - {desccenario}")
@@ -271,15 +252,8 @@ def main():
     cppe5["validation"] = cppe5["validation"].with_transform(validation_transform_batch)
     cppe5["test"] = cppe5["test"].with_transform(validation_transform_batch)
 
-    # Exibe um exemplo do dataset
-    print(cppe5["train"][0])
-    #sys.exit()
-
     # Função para computar métricas (opcional)
     #eval_compute_metrics_fn = partial(compute_metrics, image_processor=image_processor, id2label=id2label, threshold=0.0)
-
-    # Diretório para salvar o modelo
-    #dir_out_model = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/260225P2"
 
     # Carrega o modelo (substitua TableTransformerForObjectDetection pela sua classe de modelo)
     from transformers import TableTransformerForObjectDetection  # ajuste conforme necessário
@@ -340,7 +314,7 @@ def main():
         report_to="none",
         use_cpu=use_cpu,
         logging_strategy="epoch",
-        logging_dir="/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/logs",
+        logging_dir="/PATH_TO_LOGS/logs",
         gradient_accumulation_steps=4,  # Ajuste para economizar memória,
     )
 
