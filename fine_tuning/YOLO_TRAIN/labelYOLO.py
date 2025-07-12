@@ -5,9 +5,7 @@ import ast
 
 model_detect = YOLO('foduucom/table-detection-and-extraction')
 
-
-#imgpath = "/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Certificados/In/LAB_01_CTM/img/LAB_01_CTM_001_table_0.png"
-imgpath = "/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Certificados/Out/LAB_01_CTM/png/LAB01_001.png"
+imgpath = "/ROOT_PATH/LAB/LAB01_001.png"
            
 #imgpath = "/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/Certificados/Out/BCS/bcs_a_original.jpg"
 image = cv2.imread(imgpath)
