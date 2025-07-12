@@ -44,8 +44,8 @@ logger.info("Dispositivo em uso:", device)
 # ========================================================
 # Caminhos importantes
 # ========================================================
-DATASET_DIR = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET'
-BASE_DIR = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA'
+DATASET_DIR = '/ROOT_PATH/DATASET'
+BASE_DIR = '/ROOT_PATH/FT_YOLO_LORA'
 CV_DIR = os.path.join(BASE_DIR, 'CV_YOLO11')
 arquivo_yolo_yaml = os.path.join(BASE_DIR, "main", 'yolo.yaml')
 
@@ -55,12 +55,12 @@ os.makedirs(CV_DIR, exist_ok=True)
 # Modelos YOLO que serão testados
 
 MODELS = {
-    'YOLO-CEN01': '/home/aluno-pbarroso/yolo11n.pt',
-    'YOLO-CEN02': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_TRAIN/Model/YOLO11n_18062025SP2_SEMLORA.pt',
-    'YOLO-CEN03': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/YOLO11n_LORA_23062025SP4.pt',
-    'YOLO-CEN04': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/YOLO11n_LORA_18062025SP2.pt',
-    'YOLO-CEN05': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/YOLO11n_LORA_19062025SP1.pt',
-    'YOLO-CEN06': '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/YOLO11n_LORA_19062025SP1.pt'
+    'YOLO-CEN01': '/ROOT_PATH/yolo11n.pt',
+    'YOLO-CEN02': '/ROOT_PATH/FT_YOLO_TRAIN/Model/YOLO11n_18062025SP2_SEMLORA.pt',
+    'YOLO-CEN03': '/ROOT_PATH/FT_YOLO_LORA/Model/YOLO11n_LORA_23062025SP4.pt',
+    'YOLO-CEN04': '/ROOT_PATH/FT_YOLO_LORA/Model/YOLO11n_LORA_18062025SP2.pt',
+    'YOLO-CEN05': '/ROOT_PATH/FT_YOLO_LORA/Model/YOLO11n_LORA_19062025SP1.pt',
+    'YOLO-CEN06': '/ROOT_PATH/FT_YOLO_LORA/Model/YOLO11n_LORA_19062025SP1.pt'
 }
 
 # ========================================================
@@ -215,16 +215,6 @@ def train_yolo_model(trial, model_name, fold_yaml_path, fold_num):
         name=f'{model_name}_trial_{trial.number}_fold{fold_num}',
         exist_ok=True
     )
-    '''
-    if model.trainer.losses:
-        print("entrou model.trainer.losses")
-        last_loss = model.trainer.losses[-1]
-        box_loss = last_loss[0]  # box loss
-        dfl_loss = last_loss[2]  # dfl loss (cls loss está no índice 1)
-        print("box_loss ", box_loss)
-        print("dfl_loss ", dfl_loss)
-    '''
-    #metrics = model.val()
     
     #print("metrics train/box_loss ", )
     # Caminho para o arquivo de resultados
