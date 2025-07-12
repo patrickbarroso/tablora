@@ -1,6 +1,6 @@
 # TabLoRA: Table Detection and Structural Recognition via YOLO + TATR with Flask
 
-TabLoRA4 is an integrated AI pipeline that combines two state-of-the-art models — **YOLOv8 (with LoRA fine-tuning)** for table detection, and **TATR (Table Transformer, also LoRA-tuned)** for structural parsing — into a unified web application using **Flask**.
+TabLoRA is an integrated AI pipeline that combines two state-of-the-art models — **YOLOv8 (with LoRA fine-tuning)** for table detection, and **TATR (Table Transformer, also LoRA-tuned)** for structural parsing — into a unified web application using **Flask**.
 
 ## 🔍 Overview
 
@@ -24,7 +24,7 @@ To deploy this pipeline in an operational environment, both models are encapsula
 
 bash
 git clone https://github.com/your-username/TabLoRA4.git
-cd TabLoRA4
+cd TabLoRA
 
 
 ### 2. Setup the Python environment
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 ### 3. Project Structure
 
-TabLoRA4/
+TabLoRA/
 ├── app.py                  # Flask web application
 ├── models/
 │   ├── yolo_model.pt       # YOLO checkpoint (LoRA fine-tuned)
