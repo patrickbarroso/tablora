@@ -1,0 +1,731 @@
+in/ftYOLOLORA_yaml3.py
+Usando dispositivo: cuda
+Tratando camada model.model.12.cv2.conv...
+Tratando camada model.model.12.m.0.cv1.conv...
+2024-11-07 15:22:20,723 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Tratando camada model.model.12.m.0.cv2.conv...
+2024-11-07 15:22:20,726 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Tratando camada model.model.21.cv2.conv...
+2024-11-07 15:22:20,728 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Tratando camada model.model.21.m.0.cv1.conv...
+2024-11-07 15:22:20,730 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Tratando camada model.model.21.m.0.cv2.conv...
+2024-11-07 15:22:20,732 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Tratando camada model.model.22.cv3.0.1.conv...
+2024-11-07 15:22:20,735 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Tratando camada model.model.22.cv3.2.0.conv...
+2024-11-07 15:22:20,737 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Tratando camada model.model.22.dfl.conv...
+2024-11-07 15:22:20,740 - INFO - Already found a `peft_config` attribute in the model. This will lead to having multiple adapters in the model. Make sure to know what you are doing!
+Parâmetros ajustados pelo LoRA:
+model.model.12.cv2.conv.lora_A.default.weight
+model.model.12.cv2.conv.lora_B.default.weight
+model.model.12.m.0.cv1.conv.lora_A.default.weight
+model.model.12.m.0.cv1.conv.lora_B.default.weight
+model.model.12.m.0.cv2.conv.lora_A.default.weight
+model.model.12.m.0.cv2.conv.lora_B.default.weight
+model.model.21.cv2.conv.lora_A.default.weight
+model.model.21.cv2.conv.lora_B.default.weight
+model.model.21.m.0.cv1.conv.lora_A.default.weight
+model.model.21.m.0.cv1.conv.lora_B.default.weight
+model.model.21.m.0.cv2.conv.lora_A.default.weight
+model.model.21.m.0.cv2.conv.lora_B.default.weight
+model.model.22.cv3.0.1.conv.lora_A.default.weight
+model.model.22.cv3.0.1.conv.lora_B.default.weight
+model.model.22.cv3.2.0.conv.lora_A.default.weight
+model.model.22.cv3.2.0.conv.lora_B.default.weight
+model.model.22.dfl.conv.lora_A.default.weight
+model.model.22.dfl.conv.lora_B.default.weight
+New https://pypi.org/project/ultralytics/8.3.28 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics YOLOv8.0.239 🚀 Python-3.12.3 torch-2.2.2 CUDA:0 (NVIDIA RTX 6000 Ada Generation, 48647MiB)
+engine/trainer: task=detect, mode=train, model=yolov8n.pt, data=/home/aluno-pbarroso/pytorch-pbarroso/YOLOFT/main/yolo.yaml, epochs=50, time=None, patience=50, batch=5, imgsz=640, save=True, save_period=-1, cache=False, device=cuda, workers=8, project=None, name=train5, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.0004, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, mosaic=1.0, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train5
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 22        [15, 18, 21]  1    751507  ultralytics.nn.modules.head.Detect           [1, [64, 128, 256]]           
+Model summary: 225 layers, 3011043 parameters, 3011027 gradients, 8.2 GFLOPs
+
+Transferred 312/355 items from pretrained weights
+TensorBoard: Start with 'tensorboard --logdir runs/detect/train5', view at http://localhost:6006/
+Freezing layer 'model.22.dfl.conv.weight'
+AMP: running Automatic Mixed Precision (AMP) checks with YOLOv8n...
+AMP: checks passed ✅
+train: Scanning /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/train/labels.cache... 901 images, 1 backgrounds, 3 corrupt: 100%|██████████| 902/902 [00:00<?, ?it/s]
+train: WARNING ⚠️ /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/train/images/LAB_02_126.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+train: WARNING ⚠️ /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/train/images/LAB_02_130.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+train: WARNING ⚠️ /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/train/images/LAB_02_134.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+val: Scanning /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/val/labels.cache... 226 images, 0 backgrounds, 2 corrupt: 100%|██████████| 226/226 [00:00<?, ?it/s]
+val: WARNING ⚠️ /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/val/images/LAB_02_138.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+val: WARNING ⚠️ /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/val/images/LAB_06_110.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.395]
+Plotting labels to runs/detect/train5/labels.jpg... 
+optimizer: 'optimizer=auto' found, ignoring 'lr0=0.0004' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
+optimizer: AdamW(lr=0.002, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005078125), 63 bias(decay=0.0)
+50 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       1/50      1.01G      1.365      1.926       1.72         12        640: 100%|██████████| 180/180 [00:15<00:00, 11.72it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:02<00:00,  7.82it/s]
+                   all        224        226      0.823      0.846       0.87      0.597
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       2/50      1.02G     0.6103     0.8664      1.058         15        640: 100%|██████████| 180/180 [00:14<00:00, 12.55it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.67it/s]
+                   all        224        226      0.937      0.925      0.955      0.796
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       3/50      1.02G     0.5392     0.6841     0.9977         12        640: 100%|██████████| 180/180 [00:14<00:00, 12.64it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.73it/s]
+                   all        224        226      0.911       0.92      0.959       0.83
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       4/50      1.02G     0.4657     0.5773      0.971         11        640: 100%|██████████| 180/180 [00:14<00:00, 12.55it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.82it/s]
+                   all        224        226      0.977      0.946      0.989      0.904
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       5/50      1.02G     0.4313      0.486     0.9454         11        640: 100%|██████████| 180/180 [00:14<00:00, 12.43it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.75it/s]
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       6/50      1.01G      0.386     0.4223     0.9256         16        640: 100%|██████████| 180/180 [00:14<00:00, 12.53it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 20.43it/s]
+                   all        224        226      0.963      0.973      0.977      0.916
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       7/50      1.01G     0.3898      0.415      0.924          6        640: 100%|██████████| 180/180 [00:14<00:00, 12.60it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.44it/s]
+                   all        224        226      0.942      0.973      0.957      0.883
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       8/50      1.01G      0.358     0.3889     0.9175         13        640: 100%|██████████| 180/180 [00:14<00:00, 12.55it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 20.40it/s]
+                   all        224        226      0.965      0.987      0.971      0.914
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+       9/50      1.01G     0.3317     0.3595     0.9058         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 22.25it/s]
+                   all        224        226      0.964      0.991      0.978      0.939
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      10/50      1.01G     0.3285     0.3466     0.9028         11        640: 100%|██████████| 180/180 [00:14<00:00, 12.75it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.06it/s]
+                   all        224        226      0.969      0.991      0.979      0.942
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      11/50      1.01G     0.3282      0.347     0.8996         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.65it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.78it/s]
+                   all        224        226      0.973      0.991      0.978      0.946
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      12/50      1.01G     0.3021     0.3135     0.8915         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.37it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.71it/s]
+                   all        224        226      0.972      0.991      0.977      0.953
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      13/50      1.01G     0.2946     0.3245     0.8954         16        640: 100%|██████████| 180/180 [00:14<00:00, 12.34it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.53it/s]
+                   all        224        226      0.972      0.991      0.983       0.96
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      14/50      1.01G     0.2951     0.3082     0.8957         11        640: 100%|██████████| 180/180 [00:14<00:00, 12.28it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.12it/s]
+                   all        224        226      0.944      0.961      0.971      0.937
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      15/50      1.01G     0.2755     0.2971     0.8862         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.25it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.29it/s]
+                   all        224        226      0.969      0.991      0.982      0.964
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      16/50      1.01G     0.2791     0.2972     0.8894          6        640: 100%|██████████| 180/180 [00:14<00:00, 12.44it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.19it/s]
+                   all        224        226      0.974          1       0.99      0.976
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      17/50      1.01G     0.2619     0.2816     0.8839         15        640: 100%|██████████| 180/180 [00:14<00:00, 12.09it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.71it/s]
+                   all        224        226      0.972      0.991      0.983       0.96
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      18/50      1.01G     0.2771     0.2889     0.8885         11        640: 100%|██████████| 180/180 [00:14<00:00, 12.13it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.62it/s]
+                   all        224        226      0.952      0.987      0.982      0.949
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      19/50      1.01G     0.2666     0.2787     0.8827         14        640: 100%|██████████| 180/180 [00:15<00:00, 11.73it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.11it/s]
+                   all        224        226      0.973      0.991      0.978      0.954
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      20/50      1.01G     0.2521     0.2621     0.8776         10        640: 100%|██████████| 180/180 [00:14<00:00, 12.11it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 16.19it/s]
+                   all        224        226      0.982          1      0.992      0.977
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      21/50      1.01G     0.2355     0.2512     0.8754         12        640: 100%|██████████| 180/180 [00:14<00:00, 12.25it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.65it/s]
+                   all        224        226      0.969      0.991      0.985      0.968
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      22/50      1.01G     0.2397     0.2495     0.8775         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 16.44it/s]
+                   all        224        226       0.98      0.991      0.987      0.975
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      23/50      1.01G     0.2445     0.2476     0.8717         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.10it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.60it/s]
+                   all        224        226      0.973      0.991      0.983      0.964
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      24/50      1.01G     0.2315     0.2407      0.872         13        640: 100%|██████████| 180/180 [00:14<00:00, 12.09it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.43it/s]
+                   all        224        226      0.992      0.996      0.995      0.981
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      25/50      1.01G     0.2254     0.2336     0.8737         16        640: 100%|██████████| 180/180 [00:15<00:00, 11.90it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.58it/s]
+                   all        224        226      0.973      0.991      0.984      0.969
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      26/50      1.01G     0.2245     0.2328     0.8732         16        640: 100%|██████████| 180/180 [00:15<00:00, 11.90it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.58it/s]
+                   all        224        226      0.973      0.991      0.987       0.97
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      27/50      1.01G     0.2212     0.2279     0.8695         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.01it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.47it/s]
+                   all        224        226      0.974      0.991      0.982      0.965
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      28/50      1.01G     0.2133     0.2261     0.8645         14        640: 100%|██████████| 180/180 [00:15<00:00, 11.90it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.41it/s]
+                   all        224        226      0.964      0.991      0.977      0.964
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      29/50      1.01G     0.2241     0.2352     0.8727         14        640: 100%|██████████| 180/180 [00:15<00:00, 11.93it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.65it/s]
+                   all        224        226      0.973      0.991      0.981      0.968
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      30/50      1.01G     0.2269     0.2296     0.8728         13        640: 100%|██████████| 180/180 [00:15<00:00, 11.76it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.90it/s]
+                   all        224        226      0.973      0.991      0.985      0.977
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      31/50      1.01G     0.2104     0.2228     0.8667         16        640: 100%|██████████| 180/180 [00:14<00:00, 12.16it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 20.66it/s]
+                   all        224        226      0.973      0.991       0.98      0.967
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      32/50      1.01G     0.2054     0.2081     0.8647         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.49it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 16.77it/s]
+                   all        224        226      0.973      0.991      0.978      0.967
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      33/50      1.01G     0.2011     0.2078     0.8729         11        640: 100%|██████████| 180/180 [00:14<00:00, 12.08it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.71it/s]
+                   all        224        226      0.973      0.991      0.978      0.969
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      34/50      1.01G     0.2036     0.2102     0.8664         13        640: 100%|██████████| 180/180 [00:15<00:00, 11.49it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 17.85it/s]
+                   all        224        226      0.956          1      0.983      0.971
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      35/50      1.01G     0.2004     0.2017     0.8641         13        640: 100%|██████████| 180/180 [00:14<00:00, 12.18it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 16.01it/s]
+                   all        224        226      0.973      0.991      0.983      0.976
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      36/50      1.01G     0.1994     0.2056     0.8677         14        640: 100%|██████████| 180/180 [00:14<00:00, 12.32it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.99it/s]
+                   all        224        226      0.973      0.991      0.979      0.967
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      37/50      1.01G     0.2004      0.204     0.8669         13        640: 100%|██████████| 180/180 [00:14<00:00, 12.75it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.98it/s]
+                   all        224        226      0.985          1      0.993      0.984
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      38/50      1.02G     0.1986     0.2017     0.8654         10        640: 100%|██████████| 180/180 [00:14<00:00, 12.30it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 20.25it/s]
+                   all        224        226       0.96          1      0.982      0.973
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      39/50      1.01G     0.1823     0.1907     0.8625         16        640: 100%|██████████| 180/180 [00:14<00:00, 12.29it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.51it/s]
+                   all        224        226      0.973      0.991      0.974      0.968
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      40/50      1.01G     0.1877     0.1892     0.8669         16        640: 100%|██████████| 180/180 [00:13<00:00, 13.31it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 18.89it/s]
+                   all        224        226      0.973      0.991      0.978      0.972
+Closing dataloader mosaic
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      41/50      1.01G     0.1776     0.1632     0.8534          4        640: 100%|██████████| 180/180 [00:13<00:00, 13.65it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 20.32it/s]
+                   all        224        226       0.97          1      0.984      0.975
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      42/50      1.01G     0.1883      0.162     0.8523          4        640: 100%|██████████| 180/180 [00:13<00:00, 13.77it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.29it/s]
+                   all        224        226      0.965      0.996      0.983      0.973
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      43/50      1.01G     0.1743     0.1554     0.8566          4        640: 100%|██████████| 180/180 [00:12<00:00, 14.07it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.83it/s]
+                   all        224        226      0.974      0.996      0.981      0.971
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      44/50      1.01G     0.1641     0.1467     0.8351          4        640: 100%|██████████| 180/180 [00:12<00:00, 14.50it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 21.92it/s]
+                   all        224        226      0.974          1      0.984      0.975
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      45/50      1.01G     0.1592       0.14     0.8453          4        640: 100%|██████████| 180/180 [00:12<00:00, 14.32it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.70it/s]
+                   all        224        226      0.991          1      0.992      0.984
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      46/50      1.01G     0.1504     0.1314     0.8321          4        640: 100%|██████████| 180/180 [00:12<00:00, 13.94it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 21.92it/s]
+                   all        224        226      0.982          1      0.994      0.988
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      47/50      1.01G     0.1451     0.1263     0.8352          4        640: 100%|██████████| 180/180 [00:14<00:00, 12.64it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.93it/s]
+                   all        224        226      0.987          1      0.994      0.989
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      48/50      1.01G     0.1425     0.1228     0.8417          4        640: 100%|██████████| 180/180 [00:14<00:00, 12.50it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 19.15it/s]
+                   all        224        226      0.982          1      0.993       0.99
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      49/50      1.01G     0.1372     0.1215     0.8356          4        640: 100%|██████████| 180/180 [00:14<00:00, 12.78it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 21.21it/s]
+                   all        224        226       0.97          1      0.991      0.987
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      50/50      1.01G     0.1341     0.1154     0.8432          4        640: 100%|██████████| 180/180 [00:14<00:00, 12.52it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:01<00:00, 20.59it/s]
+                   all        224        226       0.97          1      0.988      0.982
+
+50 epochs completed in 0.229 hours.
+Optimizer stripped from runs/detect/train5/weights/last.pt, 6.2MB
+Optimizer stripped from runs/detect/train5/weights/best.pt, 6.2MB
+
+Validating runs/detect/train5/weights/best.pt...
+Ultralytics YOLOv8.0.239 🚀 Python-3.12.3 torch-2.2.2 CUDA:0 (NVIDIA RTX 6000 Ada Generation, 48647MiB)
+Model summary (fused): 168 layers, 3005843 parameters, 0 gradients, 8.1 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 23/23 [00:00<00:00, 23.25it/s]
+                   all        224        226      0.982          1      0.993       0.99
+Speed: 0.1ms preprocess, 1.0ms inference, 0.0ms loss, 0.6ms postprocess per image
+Results saved to runs/detect/train5
+================================Iniciando o teste...===========================
+Ultralytics YOLOv8.0.239 🚀 Python-3.12.3 torch-2.2.2 CUDA:0 (NVIDIA RTX 6000 Ada Generation, 48647MiB)
+Model summary (fused): 168 layers, 3005843 parameters, 0 gradients, 8.1 GFLOPs
+val: Scanning /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/val/labels.cache... 226 images, 0 backgrounds, 2 corrupt: 100%|██████████| 226/226 [00:00<?, ?it/s]
+val: WARNING ⚠️ /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/val/images/LAB_02_138.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.004]
+val: WARNING ⚠️ /home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/val/images/LAB_06_110.jpg: ignoring corrupt image/label: non-normalized or out of bounds coordinates [      1.395]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 45/45 [00:02<00:00, 15.50it/s]
+                   all        224        226      0.982          1      0.993       0.99
+Speed: 0.1ms preprocess, 9.7ms inference, 0.0ms loss, 0.6ms postprocess per image
+Results saved to runs/detect/train52
+================================Imprimindo as métricas ...===========================
+ultralytics.utils.metrics.DetMetrics object with attributes:
+
+ap_class_index: array([0])
+box: ultralytics.utils.metrics.Metric object
+confusion_matrix: <ultralytics.utils.metrics.ConfusionMatrix object at 0x7a90a1769e50>
+curves: ['Precision-Recall(B)', 'F1-Confidence(B)', 'Precision-Confidence(B)', 'Recall-Confidence(B)']
+curves_results: [[array([          0,    0.001001,    0.002002,    0.003003,    0.004004,    0.005005,    0.006006,    0.007007,    0.008008,    0.009009,     0.01001,    0.011011,    0.012012,    0.013013,    0.014014,    0.015015,    0.016016,    0.017017,    0.018018,    0.019019,     0.02002,    0.021021,    0.022022,    0.023023,
+          0.024024,    0.025025,    0.026026,    0.027027,    0.028028,    0.029029,     0.03003,    0.031031,    0.032032,    0.033033,    0.034034,    0.035035,    0.036036,    0.037037,    0.038038,    0.039039,     0.04004,    0.041041,    0.042042,    0.043043,    0.044044,    0.045045,    0.046046,    0.047047,
+          0.048048,    0.049049,     0.05005,    0.051051,    0.052052,    0.053053,    0.054054,    0.055055,    0.056056,    0.057057,    0.058058,    0.059059,     0.06006,    0.061061,    0.062062,    0.063063,    0.064064,    0.065065,    0.066066,    0.067067,    0.068068,    0.069069,     0.07007,    0.071071,
+          0.072072,    0.073073,    0.074074,    0.075075,    0.076076,    0.077077,    0.078078,    0.079079,     0.08008,    0.081081,    0.082082,    0.083083,    0.084084,    0.085085,    0.086086,    0.087087,    0.088088,    0.089089,     0.09009,    0.091091,    0.092092,    0.093093,    0.094094,    0.095095,
+          0.096096,    0.097097,    0.098098,    0.099099,      0.1001,      0.1011,      0.1021,      0.1031,      0.1041,     0.10511,     0.10611,     0.10711,     0.10811,     0.10911,     0.11011,     0.11111,     0.11211,     0.11311,     0.11411,     0.11512,     0.11612,     0.11712,     0.11812,     0.11912,
+           0.12012,     0.12112,     0.12212,     0.12312,     0.12412,     0.12513,     0.12613,     0.12713,     0.12813,     0.12913,     0.13013,     0.13113,     0.13213,     0.13313,     0.13413,     0.13514,     0.13614,     0.13714,     0.13814,     0.13914,     0.14014,     0.14114,     0.14214,     0.14314,
+           0.14414,     0.14515,     0.14615,     0.14715,     0.14815,     0.14915,     0.15015,     0.15115,     0.15215,     0.15315,     0.15415,     0.15516,     0.15616,     0.15716,     0.15816,     0.15916,     0.16016,     0.16116,     0.16216,     0.16316,     0.16416,     0.16517,     0.16617,     0.16717,
+           0.16817,     0.16917,     0.17017,     0.17117,     0.17217,     0.17317,     0.17417,     0.17518,     0.17618,     0.17718,     0.17818,     0.17918,     0.18018,     0.18118,     0.18218,     0.18318,     0.18418,     0.18519,     0.18619,     0.18719,     0.18819,     0.18919,     0.19019,     0.19119,
+           0.19219,     0.19319,     0.19419,      0.1952,      0.1962,      0.1972,      0.1982,      0.1992,      0.2002,      0.2012,      0.2022,      0.2032,      0.2042,     0.20521,     0.20621,     0.20721,     0.20821,     0.20921,     0.21021,     0.21121,     0.21221,     0.21321,     0.21421,     0.21522,
+           0.21622,     0.21722,     0.21822,     0.21922,     0.22022,     0.22122,     0.22222,     0.22322,     0.22422,     0.22523,     0.22623,     0.22723,     0.22823,     0.22923,     0.23023,     0.23123,     0.23223,     0.23323,     0.23423,     0.23524,     0.23624,     0.23724,     0.23824,     0.23924,
+           0.24024,     0.24124,     0.24224,     0.24324,     0.24424,     0.24525,     0.24625,     0.24725,     0.24825,     0.24925,     0.25025,     0.25125,     0.25225,     0.25325,     0.25425,     0.25526,     0.25626,     0.25726,     0.25826,     0.25926,     0.26026,     0.26126,     0.26226,     0.26326,
+           0.26426,     0.26527,     0.26627,     0.26727,     0.26827,     0.26927,     0.27027,     0.27127,     0.27227,     0.27327,     0.27427,     0.27528,     0.27628,     0.27728,     0.27828,     0.27928,     0.28028,     0.28128,     0.28228,     0.28328,     0.28428,     0.28529,     0.28629,     0.28729,
+           0.28829,     0.28929,     0.29029,     0.29129,     0.29229,     0.29329,     0.29429,      0.2953,      0.2963,      0.2973,      0.2983,      0.2993,      0.3003,      0.3013,      0.3023,      0.3033,      0.3043,     0.30531,     0.30631,     0.30731,     0.30831,     0.30931,     0.31031,     0.31131,
+           0.31231,     0.31331,     0.31431,     0.31532,     0.31632,     0.31732,     0.31832,     0.31932,     0.32032,     0.32132,     0.32232,     0.32332,     0.32432,     0.32533,     0.32633,     0.32733,     0.32833,     0.32933,     0.33033,     0.33133,     0.33233,     0.33333,     0.33433,     0.33534,
+           0.33634,     0.33734,     0.33834,     0.33934,     0.34034,     0.34134,     0.34234,     0.34334,     0.34434,     0.34535,     0.34635,     0.34735,     0.34835,     0.34935,     0.35035,     0.35135,     0.35235,     0.35335,     0.35435,     0.35536,     0.35636,     0.35736,     0.35836,     0.35936,
+           0.36036,     0.36136,     0.36236,     0.36336,     0.36436,     0.36537,     0.36637,     0.36737,     0.36837,     0.36937,     0.37037,     0.37137,     0.37237,     0.37337,     0.37437,     0.37538,     0.37638,     0.37738,     0.37838,     0.37938,     0.38038,     0.38138,     0.38238,     0.38338,
+           0.38438,     0.38539,     0.38639,     0.38739,     0.38839,     0.38939,     0.39039,     0.39139,     0.39239,     0.39339,     0.39439,      0.3954,      0.3964,      0.3974,      0.3984,      0.3994,      0.4004,      0.4014,      0.4024,      0.4034,      0.4044,     0.40541,     0.40641,     0.40741,
+           0.40841,     0.40941,     0.41041,     0.41141,     0.41241,     0.41341,     0.41441,     0.41542,     0.41642,     0.41742,     0.41842,     0.41942,     0.42042,     0.42142,     0.42242,     0.42342,     0.42442,     0.42543,     0.42643,     0.42743,     0.42843,     0.42943,     0.43043,     0.43143,
+           0.43243,     0.43343,     0.43443,     0.43544,     0.43644,     0.43744,     0.43844,     0.43944,     0.44044,     0.44144,     0.44244,     0.44344,     0.44444,     0.44545,     0.44645,     0.44745,     0.44845,     0.44945,     0.45045,     0.45145,     0.45245,     0.45345,     0.45445,     0.45546,
+           0.45646,     0.45746,     0.45846,     0.45946,     0.46046,     0.46146,     0.46246,     0.46346,     0.46446,     0.46547,     0.46647,     0.46747,     0.46847,     0.46947,     0.47047,     0.47147,     0.47247,     0.47347,     0.47447,     0.47548,     0.47648,     0.47748,     0.47848,     0.47948,
+           0.48048,     0.48148,     0.48248,     0.48348,     0.48448,     0.48549,     0.48649,     0.48749,     0.48849,     0.48949,     0.49049,     0.49149,     0.49249,     0.49349,     0.49449,      0.4955,      0.4965,      0.4975,      0.4985,      0.4995,      0.5005,      0.5015,      0.5025,      0.5035,
+            0.5045,     0.50551,     0.50651,     0.50751,     0.50851,     0.50951,     0.51051,     0.51151,     0.51251,     0.51351,     0.51451,     0.51552,     0.51652,     0.51752,     0.51852,     0.51952,     0.52052,     0.52152,     0.52252,     0.52352,     0.52452,     0.52553,     0.52653,     0.52753,
+           0.52853,     0.52953,     0.53053,     0.53153,     0.53253,     0.53353,     0.53453,     0.53554,     0.53654,     0.53754,     0.53854,     0.53954,     0.54054,     0.54154,     0.54254,     0.54354,     0.54454,     0.54555,     0.54655,     0.54755,     0.54855,     0.54955,     0.55055,     0.55155,
+           0.55255,     0.55355,     0.55455,     0.55556,     0.55656,     0.55756,     0.55856,     0.55956,     0.56056,     0.56156,     0.56256,     0.56356,     0.56456,     0.56557,     0.56657,     0.56757,     0.56857,     0.56957,     0.57057,     0.57157,     0.57257,     0.57357,     0.57457,     0.57558,
+           0.57658,     0.57758,     0.57858,     0.57958,     0.58058,     0.58158,     0.58258,     0.58358,     0.58458,     0.58559,     0.58659,     0.58759,     0.58859,     0.58959,     0.59059,     0.59159,     0.59259,     0.59359,     0.59459,      0.5956,      0.5966,      0.5976,      0.5986,      0.5996,
+            0.6006,      0.6016,      0.6026,      0.6036,      0.6046,     0.60561,     0.60661,     0.60761,     0.60861,     0.60961,     0.61061,     0.61161,     0.61261,     0.61361,     0.61461,     0.61562,     0.61662,     0.61762,     0.61862,     0.61962,     0.62062,     0.62162,     0.62262,     0.62362,
+           0.62462,     0.62563,     0.62663,     0.62763,     0.62863,     0.62963,     0.63063,     0.63163,     0.63263,     0.63363,     0.63463,     0.63564,     0.63664,     0.63764,     0.63864,     0.63964,     0.64064,     0.64164,     0.64264,     0.64364,     0.64464,     0.64565,     0.64665,     0.64765,
+           0.64865,     0.64965,     0.65065,     0.65165,     0.65265,     0.65365,     0.65465,     0.65566,     0.65666,     0.65766,     0.65866,     0.65966,     0.66066,     0.66166,     0.66266,     0.66366,     0.66466,     0.66567,     0.66667,     0.66767,     0.66867,     0.66967,     0.67067,     0.67167,
+           0.67267,     0.67367,     0.67467,     0.67568,     0.67668,     0.67768,     0.67868,     0.67968,     0.68068,     0.68168,     0.68268,     0.68368,     0.68468,     0.68569,     0.68669,     0.68769,     0.68869,     0.68969,     0.69069,     0.69169,     0.69269,     0.69369,     0.69469,      0.6957,
+            0.6967,      0.6977,      0.6987,      0.6997,      0.7007,      0.7017,      0.7027,      0.7037,      0.7047,     0.70571,     0.70671,     0.70771,     0.70871,     0.70971,     0.71071,     0.71171,     0.71271,     0.71371,     0.71471,     0.71572,     0.71672,     0.71772,     0.71872,     0.71972,
+           0.72072,     0.72172,     0.72272,     0.72372,     0.72472,     0.72573,     0.72673,     0.72773,     0.72873,     0.72973,     0.73073,     0.73173,     0.73273,     0.73373,     0.73473,     0.73574,     0.73674,     0.73774,     0.73874,     0.73974,     0.74074,     0.74174,     0.74274,     0.74374,
+           0.74474,     0.74575,     0.74675,     0.74775,     0.74875,     0.74975,     0.75075,     0.75175,     0.75275,     0.75375,     0.75475,     0.75576,     0.75676,     0.75776,     0.75876,     0.75976,     0.76076,     0.76176,     0.76276,     0.76376,     0.76476,     0.76577,     0.76677,     0.76777,
+           0.76877,     0.76977,     0.77077,     0.77177,     0.77277,     0.77377,     0.77477,     0.77578,     0.77678,     0.77778,     0.77878,     0.77978,     0.78078,     0.78178,     0.78278,     0.78378,     0.78478,     0.78579,     0.78679,     0.78779,     0.78879,     0.78979,     0.79079,     0.79179,
+           0.79279,     0.79379,     0.79479,      0.7958,      0.7968,      0.7978,      0.7988,      0.7998,      0.8008,      0.8018,      0.8028,      0.8038,      0.8048,     0.80581,     0.80681,     0.80781,     0.80881,     0.80981,     0.81081,     0.81181,     0.81281,     0.81381,     0.81481,     0.81582,
+           0.81682,     0.81782,     0.81882,     0.81982,     0.82082,     0.82182,     0.82282,     0.82382,     0.82482,     0.82583,     0.82683,     0.82783,     0.82883,     0.82983,     0.83083,     0.83183,     0.83283,     0.83383,     0.83483,     0.83584,     0.83684,     0.83784,     0.83884,     0.83984,
+           0.84084,     0.84184,     0.84284,     0.84384,     0.84484,     0.84585,     0.84685,     0.84785,     0.84885,     0.84985,     0.85085,     0.85185,     0.85285,     0.85385,     0.85485,     0.85586,     0.85686,     0.85786,     0.85886,     0.85986,     0.86086,     0.86186,     0.86286,     0.86386,
+           0.86486,     0.86587,     0.86687,     0.86787,     0.86887,     0.86987,     0.87087,     0.87187,     0.87287,     0.87387,     0.87487,     0.87588,     0.87688,     0.87788,     0.87888,     0.87988,     0.88088,     0.88188,     0.88288,     0.88388,     0.88488,     0.88589,     0.88689,     0.88789,
+           0.88889,     0.88989,     0.89089,     0.89189,     0.89289,     0.89389,     0.89489,      0.8959,      0.8969,      0.8979,      0.8989,      0.8999,      0.9009,      0.9019,      0.9029,      0.9039,      0.9049,     0.90591,     0.90691,     0.90791,     0.90891,     0.90991,     0.91091,     0.91191,
+           0.91291,     0.91391,     0.91491,     0.91592,     0.91692,     0.91792,     0.91892,     0.91992,     0.92092,     0.92192,     0.92292,     0.92392,     0.92492,     0.92593,     0.92693,     0.92793,     0.92893,     0.92993,     0.93093,     0.93193,     0.93293,     0.93393,     0.93493,     0.93594,
+           0.93694,     0.93794,     0.93894,     0.93994,     0.94094,     0.94194,     0.94294,     0.94394,     0.94494,     0.94595,     0.94695,     0.94795,     0.94895,     0.94995,     0.95095,     0.95195,     0.95295,     0.95395,     0.95495,     0.95596,     0.95696,     0.95796,     0.95896,     0.95996,
+           0.96096,     0.96196,     0.96296,     0.96396,     0.96496,     0.96597,     0.96697,     0.96797,     0.96897,     0.96997,     0.97097,     0.97197,     0.97297,     0.97397,     0.97497,     0.97598,     0.97698,     0.97798,     0.97898,     0.97998,     0.98098,     0.98198,     0.98298,     0.98398,
+           0.98498,     0.98599,     0.98699,     0.98799,     0.98899,     0.98999,     0.99099,     0.99199,     0.99299,     0.99399,     0.99499,       0.996,       0.997,       0.998,       0.999,           1]), array([[          1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+            0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,
+            0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,
+            0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,
+            0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,
+            0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99519,     0.99065,     0.99065,     0.99065,     0.99065,
+            0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.99065,     0.98611,     0.98611,     0.98611,     0.98611,     0.98261,
+            0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,
+            0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,
+            0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,     0.98261,           0]]), 'Recall', 'Precision'], [array([          0,    0.001001,    0.002002,    0.003003,    0.004004,    0.005005,    0.006006,    0.007007,    0.008008,    0.009009,     0.01001,    0.011011,    0.012012,    0.013013,    0.014014,    0.015015,    0.016016,    0.017017,    0.018018,    0.019019,     0.02002,    0.021021,    0.022022,    0.023023,
+          0.024024,    0.025025,    0.026026,    0.027027,    0.028028,    0.029029,     0.03003,    0.031031,    0.032032,    0.033033,    0.034034,    0.035035,    0.036036,    0.037037,    0.038038,    0.039039,     0.04004,    0.041041,    0.042042,    0.043043,    0.044044,    0.045045,    0.046046,    0.047047,
+          0.048048,    0.049049,     0.05005,    0.051051,    0.052052,    0.053053,    0.054054,    0.055055,    0.056056,    0.057057,    0.058058,    0.059059,     0.06006,    0.061061,    0.062062,    0.063063,    0.064064,    0.065065,    0.066066,    0.067067,    0.068068,    0.069069,     0.07007,    0.071071,
+          0.072072,    0.073073,    0.074074,    0.075075,    0.076076,    0.077077,    0.078078,    0.079079,     0.08008,    0.081081,    0.082082,    0.083083,    0.084084,    0.085085,    0.086086,    0.087087,    0.088088,    0.089089,     0.09009,    0.091091,    0.092092,    0.093093,    0.094094,    0.095095,
+          0.096096,    0.097097,    0.098098,    0.099099,      0.1001,      0.1011,      0.1021,      0.1031,      0.1041,     0.10511,     0.10611,     0.10711,     0.10811,     0.10911,     0.11011,     0.11111,     0.11211,     0.11311,     0.11411,     0.11512,     0.11612,     0.11712,     0.11812,     0.11912,
+           0.12012,     0.12112,     0.12212,     0.12312,     0.12412,     0.12513,     0.12613,     0.12713,     0.12813,     0.12913,     0.13013,     0.13113,     0.13213,     0.13313,     0.13413,     0.13514,     0.13614,     0.13714,     0.13814,     0.13914,     0.14014,     0.14114,     0.14214,     0.14314,
+           0.14414,     0.14515,     0.14615,     0.14715,     0.14815,     0.14915,     0.15015,     0.15115,     0.15215,     0.15315,     0.15415,     0.15516,     0.15616,     0.15716,     0.15816,     0.15916,     0.16016,     0.16116,     0.16216,     0.16316,     0.16416,     0.16517,     0.16617,     0.16717,
+           0.16817,     0.16917,     0.17017,     0.17117,     0.17217,     0.17317,     0.17417,     0.17518,     0.17618,     0.17718,     0.17818,     0.17918,     0.18018,     0.18118,     0.18218,     0.18318,     0.18418,     0.18519,     0.18619,     0.18719,     0.18819,     0.18919,     0.19019,     0.19119,
+           0.19219,     0.19319,     0.19419,      0.1952,      0.1962,      0.1972,      0.1982,      0.1992,      0.2002,      0.2012,      0.2022,      0.2032,      0.2042,     0.20521,     0.20621,     0.20721,     0.20821,     0.20921,     0.21021,     0.21121,     0.21221,     0.21321,     0.21421,     0.21522,
+           0.21622,     0.21722,     0.21822,     0.21922,     0.22022,     0.22122,     0.22222,     0.22322,     0.22422,     0.22523,     0.22623,     0.22723,     0.22823,     0.22923,     0.23023,     0.23123,     0.23223,     0.23323,     0.23423,     0.23524,     0.23624,     0.23724,     0.23824,     0.23924,
+           0.24024,     0.24124,     0.24224,     0.24324,     0.24424,     0.24525,     0.24625,     0.24725,     0.24825,     0.24925,     0.25025,     0.25125,     0.25225,     0.25325,     0.25425,     0.25526,     0.25626,     0.25726,     0.25826,     0.25926,     0.26026,     0.26126,     0.26226,     0.26326,
+           0.26426,     0.26527,     0.26627,     0.26727,     0.26827,     0.26927,     0.27027,     0.27127,     0.27227,     0.27327,     0.27427,     0.27528,     0.27628,     0.27728,     0.27828,     0.27928,     0.28028,     0.28128,     0.28228,     0.28328,     0.28428,     0.28529,     0.28629,     0.28729,
+           0.28829,     0.28929,     0.29029,     0.29129,     0.29229,     0.29329,     0.29429,      0.2953,      0.2963,      0.2973,      0.2983,      0.2993,      0.3003,      0.3013,      0.3023,      0.3033,      0.3043,     0.30531,     0.30631,     0.30731,     0.30831,     0.30931,     0.31031,     0.31131,
+           0.31231,     0.31331,     0.31431,     0.31532,     0.31632,     0.31732,     0.31832,     0.31932,     0.32032,     0.32132,     0.32232,     0.32332,     0.32432,     0.32533,     0.32633,     0.32733,     0.32833,     0.32933,     0.33033,     0.33133,     0.33233,     0.33333,     0.33433,     0.33534,
+           0.33634,     0.33734,     0.33834,     0.33934,     0.34034,     0.34134,     0.34234,     0.34334,     0.34434,     0.34535,     0.34635,     0.34735,     0.34835,     0.34935,     0.35035,     0.35135,     0.35235,     0.35335,     0.35435,     0.35536,     0.35636,     0.35736,     0.35836,     0.35936,
+           0.36036,     0.36136,     0.36236,     0.36336,     0.36436,     0.36537,     0.36637,     0.36737,     0.36837,     0.36937,     0.37037,     0.37137,     0.37237,     0.37337,     0.37437,     0.37538,     0.37638,     0.37738,     0.37838,     0.37938,     0.38038,     0.38138,     0.38238,     0.38338,
+           0.38438,     0.38539,     0.38639,     0.38739,     0.38839,     0.38939,     0.39039,     0.39139,     0.39239,     0.39339,     0.39439,      0.3954,      0.3964,      0.3974,      0.3984,      0.3994,      0.4004,      0.4014,      0.4024,      0.4034,      0.4044,     0.40541,     0.40641,     0.40741,
+           0.40841,     0.40941,     0.41041,     0.41141,     0.41241,     0.41341,     0.41441,     0.41542,     0.41642,     0.41742,     0.41842,     0.41942,     0.42042,     0.42142,     0.42242,     0.42342,     0.42442,     0.42543,     0.42643,     0.42743,     0.42843,     0.42943,     0.43043,     0.43143,
+           0.43243,     0.43343,     0.43443,     0.43544,     0.43644,     0.43744,     0.43844,     0.43944,     0.44044,     0.44144,     0.44244,     0.44344,     0.44444,     0.44545,     0.44645,     0.44745,     0.44845,     0.44945,     0.45045,     0.45145,     0.45245,     0.45345,     0.45445,     0.45546,
+           0.45646,     0.45746,     0.45846,     0.45946,     0.46046,     0.46146,     0.46246,     0.46346,     0.46446,     0.46547,     0.46647,     0.46747,     0.46847,     0.46947,     0.47047,     0.47147,     0.47247,     0.47347,     0.47447,     0.47548,     0.47648,     0.47748,     0.47848,     0.47948,
+           0.48048,     0.48148,     0.48248,     0.48348,     0.48448,     0.48549,     0.48649,     0.48749,     0.48849,     0.48949,     0.49049,     0.49149,     0.49249,     0.49349,     0.49449,      0.4955,      0.4965,      0.4975,      0.4985,      0.4995,      0.5005,      0.5015,      0.5025,      0.5035,
+            0.5045,     0.50551,     0.50651,     0.50751,     0.50851,     0.50951,     0.51051,     0.51151,     0.51251,     0.51351,     0.51451,     0.51552,     0.51652,     0.51752,     0.51852,     0.51952,     0.52052,     0.52152,     0.52252,     0.52352,     0.52452,     0.52553,     0.52653,     0.52753,
+           0.52853,     0.52953,     0.53053,     0.53153,     0.53253,     0.53353,     0.53453,     0.53554,     0.53654,     0.53754,     0.53854,     0.53954,     0.54054,     0.54154,     0.54254,     0.54354,     0.54454,     0.54555,     0.54655,     0.54755,     0.54855,     0.54955,     0.55055,     0.55155,
+           0.55255,     0.55355,     0.55455,     0.55556,     0.55656,     0.55756,     0.55856,     0.55956,     0.56056,     0.56156,     0.56256,     0.56356,     0.56456,     0.56557,     0.56657,     0.56757,     0.56857,     0.56957,     0.57057,     0.57157,     0.57257,     0.57357,     0.57457,     0.57558,
+           0.57658,     0.57758,     0.57858,     0.57958,     0.58058,     0.58158,     0.58258,     0.58358,     0.58458,     0.58559,     0.58659,     0.58759,     0.58859,     0.58959,     0.59059,     0.59159,     0.59259,     0.59359,     0.59459,      0.5956,      0.5966,      0.5976,      0.5986,      0.5996,
+            0.6006,      0.6016,      0.6026,      0.6036,      0.6046,     0.60561,     0.60661,     0.60761,     0.60861,     0.60961,     0.61061,     0.61161,     0.61261,     0.61361,     0.61461,     0.61562,     0.61662,     0.61762,     0.61862,     0.61962,     0.62062,     0.62162,     0.62262,     0.62362,
+           0.62462,     0.62563,     0.62663,     0.62763,     0.62863,     0.62963,     0.63063,     0.63163,     0.63263,     0.63363,     0.63463,     0.63564,     0.63664,     0.63764,     0.63864,     0.63964,     0.64064,     0.64164,     0.64264,     0.64364,     0.64464,     0.64565,     0.64665,     0.64765,
+           0.64865,     0.64965,     0.65065,     0.65165,     0.65265,     0.65365,     0.65465,     0.65566,     0.65666,     0.65766,     0.65866,     0.65966,     0.66066,     0.66166,     0.66266,     0.66366,     0.66466,     0.66567,     0.66667,     0.66767,     0.66867,     0.66967,     0.67067,     0.67167,
+           0.67267,     0.67367,     0.67467,     0.67568,     0.67668,     0.67768,     0.67868,     0.67968,     0.68068,     0.68168,     0.68268,     0.68368,     0.68468,     0.68569,     0.68669,     0.68769,     0.68869,     0.68969,     0.69069,     0.69169,     0.69269,     0.69369,     0.69469,      0.6957,
+            0.6967,      0.6977,      0.6987,      0.6997,      0.7007,      0.7017,      0.7027,      0.7037,      0.7047,     0.70571,     0.70671,     0.70771,     0.70871,     0.70971,     0.71071,     0.71171,     0.71271,     0.71371,     0.71471,     0.71572,     0.71672,     0.71772,     0.71872,     0.71972,
+           0.72072,     0.72172,     0.72272,     0.72372,     0.72472,     0.72573,     0.72673,     0.72773,     0.72873,     0.72973,     0.73073,     0.73173,     0.73273,     0.73373,     0.73473,     0.73574,     0.73674,     0.73774,     0.73874,     0.73974,     0.74074,     0.74174,     0.74274,     0.74374,
+           0.74474,     0.74575,     0.74675,     0.74775,     0.74875,     0.74975,     0.75075,     0.75175,     0.75275,     0.75375,     0.75475,     0.75576,     0.75676,     0.75776,     0.75876,     0.75976,     0.76076,     0.76176,     0.76276,     0.76376,     0.76476,     0.76577,     0.76677,     0.76777,
+           0.76877,     0.76977,     0.77077,     0.77177,     0.77277,     0.77377,     0.77477,     0.77578,     0.77678,     0.77778,     0.77878,     0.77978,     0.78078,     0.78178,     0.78278,     0.78378,     0.78478,     0.78579,     0.78679,     0.78779,     0.78879,     0.78979,     0.79079,     0.79179,
+           0.79279,     0.79379,     0.79479,      0.7958,      0.7968,      0.7978,      0.7988,      0.7998,      0.8008,      0.8018,      0.8028,      0.8038,      0.8048,     0.80581,     0.80681,     0.80781,     0.80881,     0.80981,     0.81081,     0.81181,     0.81281,     0.81381,     0.81481,     0.81582,
+           0.81682,     0.81782,     0.81882,     0.81982,     0.82082,     0.82182,     0.82282,     0.82382,     0.82482,     0.82583,     0.82683,     0.82783,     0.82883,     0.82983,     0.83083,     0.83183,     0.83283,     0.83383,     0.83483,     0.83584,     0.83684,     0.83784,     0.83884,     0.83984,
+           0.84084,     0.84184,     0.84284,     0.84384,     0.84484,     0.84585,     0.84685,     0.84785,     0.84885,     0.84985,     0.85085,     0.85185,     0.85285,     0.85385,     0.85485,     0.85586,     0.85686,     0.85786,     0.85886,     0.85986,     0.86086,     0.86186,     0.86286,     0.86386,
+           0.86486,     0.86587,     0.86687,     0.86787,     0.86887,     0.86987,     0.87087,     0.87187,     0.87287,     0.87387,     0.87487,     0.87588,     0.87688,     0.87788,     0.87888,     0.87988,     0.88088,     0.88188,     0.88288,     0.88388,     0.88488,     0.88589,     0.88689,     0.88789,
+           0.88889,     0.88989,     0.89089,     0.89189,     0.89289,     0.89389,     0.89489,      0.8959,      0.8969,      0.8979,      0.8989,      0.8999,      0.9009,      0.9019,      0.9029,      0.9039,      0.9049,     0.90591,     0.90691,     0.90791,     0.90891,     0.90991,     0.91091,     0.91191,
+           0.91291,     0.91391,     0.91491,     0.91592,     0.91692,     0.91792,     0.91892,     0.91992,     0.92092,     0.92192,     0.92292,     0.92392,     0.92492,     0.92593,     0.92693,     0.92793,     0.92893,     0.92993,     0.93093,     0.93193,     0.93293,     0.93393,     0.93493,     0.93594,
+           0.93694,     0.93794,     0.93894,     0.93994,     0.94094,     0.94194,     0.94294,     0.94394,     0.94494,     0.94595,     0.94695,     0.94795,     0.94895,     0.94995,     0.95095,     0.95195,     0.95295,     0.95395,     0.95495,     0.95596,     0.95696,     0.95796,     0.95896,     0.95996,
+           0.96096,     0.96196,     0.96296,     0.96396,     0.96496,     0.96597,     0.96697,     0.96797,     0.96897,     0.96997,     0.97097,     0.97197,     0.97297,     0.97397,     0.97497,     0.97598,     0.97698,     0.97798,     0.97898,     0.97998,     0.98098,     0.98198,     0.98298,     0.98398,
+           0.98498,     0.98599,     0.98699,     0.98799,     0.98899,     0.98999,     0.99099,     0.99199,     0.99299,     0.99399,     0.99499,       0.996,       0.997,       0.998,       0.999,           1]), array([[     0.8057,     0.80597,     0.90487,     0.92463,     0.92778,     0.93451,     0.94203,     0.94503,     0.95202,     0.95509,     0.95989,     0.96139,     0.96401,     0.96616,     0.96935,     0.97091,     0.97205,     0.97217,     0.97228,      0.9724,     0.97252,     0.97263,     0.97275,
+            0.97286,     0.97298,      0.9731,     0.97321,     0.97333,     0.97344,     0.97356,     0.97368,     0.97379,     0.97391,     0.97402,     0.97414,     0.97453,     0.97492,     0.97531,     0.97569,     0.97608,     0.97823,     0.97844,     0.97852,      0.9786,     0.97869,     0.97877,
+            0.97885,     0.97893,     0.97902,      0.9791,     0.97918,     0.97927,     0.97935,     0.97943,     0.97952,      0.9796,     0.97968,     0.97977,     0.97985,     0.97993,     0.98002,      0.9801,     0.98018,     0.98026,     0.98035,     0.98043,     0.98053,     0.98065,     0.98076,
+            0.98088,       0.981,     0.98112,     0.98123,     0.98135,     0.98147,     0.98159,      0.9817,     0.98182,     0.98194,     0.98206,     0.98217,     0.98229,     0.98241,     0.98253,     0.98278,     0.98336,     0.98394,     0.98452,     0.98479,     0.98486,     0.98493,       0.985,
+            0.98507,     0.98514,     0.98521,     0.98528,     0.98535,     0.98542,     0.98549,     0.98556,     0.98563,      0.9857,     0.98577,     0.98584,     0.98591,     0.98598,     0.98605,     0.98612,     0.98619,     0.98625,     0.98632,     0.98639,     0.98646,     0.98653,      0.9866,
+            0.98667,     0.98674,     0.98681,     0.98688,      0.9869,     0.98691,     0.98692,     0.98692,     0.98693,     0.98693,     0.98694,     0.98695,     0.98695,     0.98696,     0.98697,     0.98697,     0.98698,     0.98698,     0.98699,       0.987,       0.987,     0.98701,     0.98701,
+            0.98702,     0.98703,     0.98703,     0.98704,     0.98705,     0.98705,     0.98706,     0.98706,     0.98707,     0.98708,     0.98708,     0.98709,     0.98709,      0.9871,     0.98711,     0.98711,     0.98712,     0.98713,     0.98713,     0.98714,     0.98714,     0.98715,     0.98716,
+            0.98716,     0.98717,     0.98717,     0.98718,     0.98719,     0.98719,      0.9872,     0.98721,     0.98721,     0.98722,     0.98722,     0.98723,     0.98724,     0.98724,     0.98725,     0.98725,     0.98726,     0.98727,     0.98727,     0.98728,     0.98729,     0.98729,      0.9873,
+             0.9873,     0.98731,     0.98732,     0.98732,     0.98733,     0.98733,     0.98734,     0.98735,     0.98735,     0.98736,     0.98736,     0.98737,     0.98738,     0.98738,     0.98739,      0.9874,      0.9874,     0.98741,     0.98741,     0.98742,     0.98743,     0.98743,     0.98744,
+            0.98744,     0.98745,     0.98746,     0.98746,     0.98747,     0.98748,     0.98748,     0.98749,     0.98749,      0.9875,     0.98751,     0.98751,     0.98752,     0.98752,     0.98753,     0.98754,     0.98754,     0.98755,     0.98756,     0.98756,     0.98757,     0.98757,     0.98758,
+            0.98759,     0.98759,      0.9876,      0.9876,     0.98761,     0.98762,     0.98762,     0.98763,     0.98764,     0.98764,     0.98765,     0.98765,     0.98766,     0.98767,     0.98767,     0.98768,     0.98768,     0.98769,      0.9877,      0.9877,     0.98771,     0.98771,     0.98772,
+            0.98773,     0.98773,     0.98774,     0.98775,     0.98775,     0.98776,     0.98776,     0.98777,     0.98778,     0.98778,     0.98779,     0.98779,      0.9878,     0.98781,     0.98781,     0.98782,     0.98783,     0.98783,     0.98784,     0.98784,     0.98785,     0.98786,     0.98786,
+            0.98787,     0.98787,     0.98788,     0.98789,     0.98789,      0.9879,     0.98791,     0.98791,     0.98792,     0.98792,     0.98793,     0.98794,     0.98794,     0.98795,     0.98795,     0.98796,     0.98797,     0.98797,     0.98798,     0.98799,     0.98799,       0.988,       0.988,
+            0.98801,     0.98802,     0.98802,     0.98803,     0.98803,     0.98804,     0.98805,     0.98805,     0.98806,     0.98806,     0.98807,     0.98808,     0.98808,     0.98809,      0.9881,      0.9881,     0.98811,     0.98811,     0.98812,     0.98813,     0.98813,     0.98814,     0.98814,
+            0.98815,     0.98816,     0.98816,     0.98817,     0.98818,     0.98818,     0.98819,     0.98819,      0.9882,     0.98821,     0.98821,     0.98822,     0.98822,     0.98823,     0.98824,     0.98824,     0.98825,     0.98825,     0.98826,     0.98827,     0.98827,     0.98828,     0.98829,
+            0.98829,      0.9883,      0.9883,     0.98831,     0.98832,     0.98832,     0.98833,     0.98833,     0.98834,     0.98835,     0.98835,     0.98836,     0.98837,     0.98837,     0.98838,     0.98838,     0.98839,      0.9884,      0.9884,     0.98841,     0.98841,     0.98842,     0.98843,
+            0.98843,     0.98844,     0.98844,     0.98845,     0.98846,     0.98846,     0.98847,     0.98848,     0.98848,     0.98849,     0.98849,      0.9885,     0.98851,     0.98851,     0.98852,     0.98852,     0.98853,     0.98854,     0.98854,     0.98855,     0.98856,     0.98856,     0.98857,
+            0.98857,     0.98858,     0.98859,     0.98859,      0.9886,      0.9886,     0.98861,     0.98862,     0.98862,     0.98863,     0.98863,     0.98864,     0.98865,     0.98865,     0.98866,     0.98867,     0.98867,     0.98868,     0.98868,     0.98869,      0.9887,      0.9887,     0.98871,
+            0.98871,     0.98872,     0.98873,     0.98873,     0.98874,     0.98875,     0.98875,     0.98876,     0.98876,     0.98877,     0.98878,     0.98878,     0.98879,     0.98879,      0.9888,     0.98881,     0.98881,     0.98882,     0.98882,     0.98883,     0.98884,     0.98884,     0.98885,
+            0.98886,     0.98886,     0.98887,     0.98887,     0.98888,     0.98889,     0.98889,      0.9889,      0.9889,     0.98891,     0.98892,     0.98892,     0.98893,     0.98894,     0.98894,     0.98895,     0.98895,     0.98896,     0.98897,     0.98897,     0.98898,     0.98898,     0.98899,
+              0.989,       0.989,     0.98901,     0.98901,     0.98902,     0.98903,     0.98903,     0.98904,     0.98905,     0.98905,     0.98906,     0.98906,     0.98907,     0.98908,     0.98908,     0.98909,     0.98909,      0.9891,      0.9891,     0.98911,     0.98912,     0.98912,     0.98913,
+            0.98913,     0.98914,     0.98915,     0.98915,     0.98916,     0.98916,     0.98917,     0.98917,     0.98918,     0.98919,     0.98919,      0.9892,      0.9892,     0.98921,     0.98922,     0.98922,     0.98923,     0.98923,     0.98924,     0.98925,     0.98925,     0.98926,     0.98926,
+            0.98927,     0.98927,     0.98928,     0.98929,     0.98929,      0.9893,      0.9893,     0.98931,     0.98932,     0.98932,     0.98933,     0.98933,     0.98934,     0.98935,     0.98935,     0.98936,     0.98936,     0.98937,     0.98937,     0.98938,     0.98939,     0.98939,      0.9894,
+             0.9894,     0.98941,     0.98942,     0.98942,     0.98943,     0.98943,     0.98944,     0.98944,     0.98945,     0.98946,     0.98946,     0.98947,     0.98947,     0.98948,     0.98949,     0.98949,      0.9895,      0.9895,     0.98951,     0.98952,     0.98952,     0.98953,     0.98953,
+            0.98954,     0.98954,     0.98955,     0.98956,     0.98956,     0.98957,     0.98957,     0.98958,     0.98959,     0.98959,      0.9896,      0.9896,     0.98961,     0.98961,     0.98962,     0.98963,     0.98963,     0.98964,     0.98964,     0.98965,     0.98966,     0.98966,     0.98967,
+            0.98967,     0.98968,     0.98969,     0.98969,      0.9897,      0.9897,     0.98971,     0.98971,     0.98972,     0.98973,     0.98973,     0.98974,     0.98974,     0.98975,     0.98976,     0.98976,     0.98977,     0.98977,     0.98978,     0.98978,     0.98979,      0.9898,      0.9898,
+            0.98981,     0.98981,     0.98982,     0.98983,     0.98983,     0.98984,     0.98984,     0.98985,     0.98985,     0.98986,     0.98987,     0.98987,     0.98988,     0.98988,     0.98989,      0.9899,      0.9899,     0.98991,     0.98991,     0.98992,     0.98993,     0.98993,     0.98994,
+            0.98994,     0.98995,     0.98995,     0.98996,     0.98997,     0.98997,     0.98998,     0.98998,     0.98999,        0.99,        0.99,     0.99001,     0.99001,     0.99002,     0.99002,     0.99003,     0.99004,     0.99004,     0.99005,     0.99005,     0.99006,     0.99007,     0.99007,
+            0.99008,     0.99008,     0.99009,      0.9901,      0.9901,     0.99011,     0.99011,     0.99012,     0.99012,     0.99013,     0.99014,     0.99014,     0.99015,     0.99015,     0.99016,     0.99017,     0.99017,     0.99018,     0.99018,     0.99019,     0.99019,      0.9902,     0.99021,
+            0.99021,     0.99022,     0.99022,     0.99023,     0.99024,     0.99024,     0.99025,     0.99025,     0.99026,     0.99026,     0.99027,     0.99028,     0.99028,     0.99029,     0.99029,      0.9903,     0.99031,     0.99031,     0.99032,     0.99032,     0.99033,     0.99034,     0.99034,
+            0.99035,     0.99035,     0.99036,     0.99036,     0.99037,     0.99038,     0.99038,     0.99039,     0.99039,      0.9904,     0.99041,     0.99041,     0.99042,     0.99042,     0.99043,     0.99043,     0.99044,     0.99045,     0.99045,     0.99046,     0.99046,     0.99047,     0.99048,
+            0.99048,     0.99049,     0.99049,      0.9905,      0.9905,     0.99051,     0.99052,     0.99052,     0.99053,     0.99053,     0.99054,     0.99055,     0.99055,     0.99056,     0.99056,     0.99057,     0.99057,     0.99058,     0.99059,     0.99059,      0.9906,      0.9906,     0.99061,
+            0.99062,     0.99062,     0.99063,     0.99063,     0.99064,     0.99065,     0.99065,     0.99066,     0.99066,     0.99067,     0.99067,     0.99068,     0.99069,     0.99069,      0.9907,      0.9907,     0.99071,     0.99072,     0.99072,     0.99073,     0.99073,     0.99074,     0.99074,
+            0.99075,     0.99076,     0.99076,     0.99077,     0.99077,     0.99078,     0.99079,     0.99079,      0.9908,      0.9908,     0.99081,     0.99081,     0.99082,     0.99083,     0.99083,     0.99084,     0.99084,     0.99085,     0.99086,     0.99086,     0.99087,     0.99087,     0.99088,
+            0.99088,     0.99089,      0.9909,      0.9909,     0.99091,     0.99091,     0.99092,     0.99093,     0.99093,     0.99094,     0.99094,     0.99095,     0.99096,     0.99096,     0.99097,     0.99097,     0.99098,     0.99098,     0.99099,       0.991,       0.991,     0.99101,     0.99101,
+            0.99102,     0.99103,     0.99103,     0.99104,     0.99104,     0.99105,     0.99105,     0.99106,     0.99107,     0.99107,     0.99108,     0.99108,     0.99109,      0.9911,      0.9911,     0.99111,     0.99111,     0.99112,     0.99112,     0.99113,     0.99114,     0.99114,     0.99115,
+            0.99115,     0.99116,     0.99117,     0.99117,     0.99118,     0.99118,     0.99119,     0.99119,      0.9912,     0.99121,     0.99121,     0.99122,     0.99122,     0.99089,     0.98971,     0.98884,     0.98844,     0.98803,     0.98762,     0.98721,      0.9868,     0.98655,     0.98631,
+            0.98606,     0.98582,     0.98557,     0.98533,     0.98508,     0.98484,     0.98459,     0.98445,     0.98433,     0.98421,     0.98409,     0.98398,     0.98386,     0.98374,     0.98362,      0.9835,     0.98338,     0.98326,     0.98314,     0.98302,      0.9829,     0.98278,     0.98267,
+            0.98255,     0.98243,     0.98231,     0.98225,     0.98219,     0.98214,     0.98208,     0.98203,     0.98197,     0.98191,     0.98186,      0.9818,     0.98175,     0.98169,     0.98164,     0.98158,     0.98152,     0.98147,     0.98141,     0.98136,      0.9813,     0.98125,     0.98119,
+            0.98113,     0.98108,     0.98102,     0.98097,     0.98091,     0.98085,      0.9808,     0.98074,     0.98069,     0.98063,     0.98058,     0.98052,     0.98046,     0.98041,     0.98035,      0.9803,     0.98024,     0.98018,     0.98013,     0.98007,     0.97721,     0.97478,     0.97324,
+            0.97151,     0.96863,     0.96636,     0.96356,     0.96314,     0.96271,     0.96228,     0.96186,     0.96357,     0.96331,     0.96166,     0.96034,     0.95911,     0.95874,     0.95855,     0.95835,     0.95816,     0.95796,     0.95777,     0.95757,     0.95738,     0.95718,     0.95699,
+            0.95679,      0.9566,     0.95574,     0.95447,     0.95213,     0.95085,     0.94626,     0.94461,     0.93936,      0.9359,     0.93005,     0.91887,     0.91469,     0.90785,     0.90464,      0.8941,     0.89056,     0.88518,     0.87149,     0.86145,     0.85128,     0.83722,     0.82606,
+            0.81245,     0.80135,     0.79429,     0.78589,     0.77444,     0.73469,     0.71926,      0.6853,     0.65236,     0.59043,     0.50068,     0.39472,     0.29768,     0.25683,     0.19718,     0.15403,    0.099165,    0.079059,    0.055866,    0.041482,    0.034191,    0.029981,    0.021743,
+           0.011738,           0,           0,           0,           0,           0,           0,           0,           0,           0,           0]]), 'Confidence', 'F1'], [array([          0,    0.001001,    0.002002,    0.003003,    0.004004,    0.005005,    0.006006,    0.007007,    0.008008,    0.009009,     0.01001,    0.011011,    0.012012,    0.013013,    0.014014,    0.015015,    0.016016,    0.017017,    0.018018,    0.019019,     0.02002,    0.021021,    0.022022,    0.023023,
+          0.024024,    0.025025,    0.026026,    0.027027,    0.028028,    0.029029,     0.03003,    0.031031,    0.032032,    0.033033,    0.034034,    0.035035,    0.036036,    0.037037,    0.038038,    0.039039,     0.04004,    0.041041,    0.042042,    0.043043,    0.044044,    0.045045,    0.046046,    0.047047,
+          0.048048,    0.049049,     0.05005,    0.051051,    0.052052,    0.053053,    0.054054,    0.055055,    0.056056,    0.057057,    0.058058,    0.059059,     0.06006,    0.061061,    0.062062,    0.063063,    0.064064,    0.065065,    0.066066,    0.067067,    0.068068,    0.069069,     0.07007,    0.071071,
+          0.072072,    0.073073,    0.074074,    0.075075,    0.076076,    0.077077,    0.078078,    0.079079,     0.08008,    0.081081,    0.082082,    0.083083,    0.084084,    0.085085,    0.086086,    0.087087,    0.088088,    0.089089,     0.09009,    0.091091,    0.092092,    0.093093,    0.094094,    0.095095,
+          0.096096,    0.097097,    0.098098,    0.099099,      0.1001,      0.1011,      0.1021,      0.1031,      0.1041,     0.10511,     0.10611,     0.10711,     0.10811,     0.10911,     0.11011,     0.11111,     0.11211,     0.11311,     0.11411,     0.11512,     0.11612,     0.11712,     0.11812,     0.11912,
+           0.12012,     0.12112,     0.12212,     0.12312,     0.12412,     0.12513,     0.12613,     0.12713,     0.12813,     0.12913,     0.13013,     0.13113,     0.13213,     0.13313,     0.13413,     0.13514,     0.13614,     0.13714,     0.13814,     0.13914,     0.14014,     0.14114,     0.14214,     0.14314,
+           0.14414,     0.14515,     0.14615,     0.14715,     0.14815,     0.14915,     0.15015,     0.15115,     0.15215,     0.15315,     0.15415,     0.15516,     0.15616,     0.15716,     0.15816,     0.15916,     0.16016,     0.16116,     0.16216,     0.16316,     0.16416,     0.16517,     0.16617,     0.16717,
+           0.16817,     0.16917,     0.17017,     0.17117,     0.17217,     0.17317,     0.17417,     0.17518,     0.17618,     0.17718,     0.17818,     0.17918,     0.18018,     0.18118,     0.18218,     0.18318,     0.18418,     0.18519,     0.18619,     0.18719,     0.18819,     0.18919,     0.19019,     0.19119,
+           0.19219,     0.19319,     0.19419,      0.1952,      0.1962,      0.1972,      0.1982,      0.1992,      0.2002,      0.2012,      0.2022,      0.2032,      0.2042,     0.20521,     0.20621,     0.20721,     0.20821,     0.20921,     0.21021,     0.21121,     0.21221,     0.21321,     0.21421,     0.21522,
+           0.21622,     0.21722,     0.21822,     0.21922,     0.22022,     0.22122,     0.22222,     0.22322,     0.22422,     0.22523,     0.22623,     0.22723,     0.22823,     0.22923,     0.23023,     0.23123,     0.23223,     0.23323,     0.23423,     0.23524,     0.23624,     0.23724,     0.23824,     0.23924,
+           0.24024,     0.24124,     0.24224,     0.24324,     0.24424,     0.24525,     0.24625,     0.24725,     0.24825,     0.24925,     0.25025,     0.25125,     0.25225,     0.25325,     0.25425,     0.25526,     0.25626,     0.25726,     0.25826,     0.25926,     0.26026,     0.26126,     0.26226,     0.26326,
+           0.26426,     0.26527,     0.26627,     0.26727,     0.26827,     0.26927,     0.27027,     0.27127,     0.27227,     0.27327,     0.27427,     0.27528,     0.27628,     0.27728,     0.27828,     0.27928,     0.28028,     0.28128,     0.28228,     0.28328,     0.28428,     0.28529,     0.28629,     0.28729,
+           0.28829,     0.28929,     0.29029,     0.29129,     0.29229,     0.29329,     0.29429,      0.2953,      0.2963,      0.2973,      0.2983,      0.2993,      0.3003,      0.3013,      0.3023,      0.3033,      0.3043,     0.30531,     0.30631,     0.30731,     0.30831,     0.30931,     0.31031,     0.31131,
+           0.31231,     0.31331,     0.31431,     0.31532,     0.31632,     0.31732,     0.31832,     0.31932,     0.32032,     0.32132,     0.32232,     0.32332,     0.32432,     0.32533,     0.32633,     0.32733,     0.32833,     0.32933,     0.33033,     0.33133,     0.33233,     0.33333,     0.33433,     0.33534,
+           0.33634,     0.33734,     0.33834,     0.33934,     0.34034,     0.34134,     0.34234,     0.34334,     0.34434,     0.34535,     0.34635,     0.34735,     0.34835,     0.34935,     0.35035,     0.35135,     0.35235,     0.35335,     0.35435,     0.35536,     0.35636,     0.35736,     0.35836,     0.35936,
+           0.36036,     0.36136,     0.36236,     0.36336,     0.36436,     0.36537,     0.36637,     0.36737,     0.36837,     0.36937,     0.37037,     0.37137,     0.37237,     0.37337,     0.37437,     0.37538,     0.37638,     0.37738,     0.37838,     0.37938,     0.38038,     0.38138,     0.38238,     0.38338,
+           0.38438,     0.38539,     0.38639,     0.38739,     0.38839,     0.38939,     0.39039,     0.39139,     0.39239,     0.39339,     0.39439,      0.3954,      0.3964,      0.3974,      0.3984,      0.3994,      0.4004,      0.4014,      0.4024,      0.4034,      0.4044,     0.40541,     0.40641,     0.40741,
+           0.40841,     0.40941,     0.41041,     0.41141,     0.41241,     0.41341,     0.41441,     0.41542,     0.41642,     0.41742,     0.41842,     0.41942,     0.42042,     0.42142,     0.42242,     0.42342,     0.42442,     0.42543,     0.42643,     0.42743,     0.42843,     0.42943,     0.43043,     0.43143,
+           0.43243,     0.43343,     0.43443,     0.43544,     0.43644,     0.43744,     0.43844,     0.43944,     0.44044,     0.44144,     0.44244,     0.44344,     0.44444,     0.44545,     0.44645,     0.44745,     0.44845,     0.44945,     0.45045,     0.45145,     0.45245,     0.45345,     0.45445,     0.45546,
+           0.45646,     0.45746,     0.45846,     0.45946,     0.46046,     0.46146,     0.46246,     0.46346,     0.46446,     0.46547,     0.46647,     0.46747,     0.46847,     0.46947,     0.47047,     0.47147,     0.47247,     0.47347,     0.47447,     0.47548,     0.47648,     0.47748,     0.47848,     0.47948,
+           0.48048,     0.48148,     0.48248,     0.48348,     0.48448,     0.48549,     0.48649,     0.48749,     0.48849,     0.48949,     0.49049,     0.49149,     0.49249,     0.49349,     0.49449,      0.4955,      0.4965,      0.4975,      0.4985,      0.4995,      0.5005,      0.5015,      0.5025,      0.5035,
+            0.5045,     0.50551,     0.50651,     0.50751,     0.50851,     0.50951,     0.51051,     0.51151,     0.51251,     0.51351,     0.51451,     0.51552,     0.51652,     0.51752,     0.51852,     0.51952,     0.52052,     0.52152,     0.52252,     0.52352,     0.52452,     0.52553,     0.52653,     0.52753,
+           0.52853,     0.52953,     0.53053,     0.53153,     0.53253,     0.53353,     0.53453,     0.53554,     0.53654,     0.53754,     0.53854,     0.53954,     0.54054,     0.54154,     0.54254,     0.54354,     0.54454,     0.54555,     0.54655,     0.54755,     0.54855,     0.54955,     0.55055,     0.55155,
+           0.55255,     0.55355,     0.55455,     0.55556,     0.55656,     0.55756,     0.55856,     0.55956,     0.56056,     0.56156,     0.56256,     0.56356,     0.56456,     0.56557,     0.56657,     0.56757,     0.56857,     0.56957,     0.57057,     0.57157,     0.57257,     0.57357,     0.57457,     0.57558,
+           0.57658,     0.57758,     0.57858,     0.57958,     0.58058,     0.58158,     0.58258,     0.58358,     0.58458,     0.58559,     0.58659,     0.58759,     0.58859,     0.58959,     0.59059,     0.59159,     0.59259,     0.59359,     0.59459,      0.5956,      0.5966,      0.5976,      0.5986,      0.5996,
+            0.6006,      0.6016,      0.6026,      0.6036,      0.6046,     0.60561,     0.60661,     0.60761,     0.60861,     0.60961,     0.61061,     0.61161,     0.61261,     0.61361,     0.61461,     0.61562,     0.61662,     0.61762,     0.61862,     0.61962,     0.62062,     0.62162,     0.62262,     0.62362,
+           0.62462,     0.62563,     0.62663,     0.62763,     0.62863,     0.62963,     0.63063,     0.63163,     0.63263,     0.63363,     0.63463,     0.63564,     0.63664,     0.63764,     0.63864,     0.63964,     0.64064,     0.64164,     0.64264,     0.64364,     0.64464,     0.64565,     0.64665,     0.64765,
+           0.64865,     0.64965,     0.65065,     0.65165,     0.65265,     0.65365,     0.65465,     0.65566,     0.65666,     0.65766,     0.65866,     0.65966,     0.66066,     0.66166,     0.66266,     0.66366,     0.66466,     0.66567,     0.66667,     0.66767,     0.66867,     0.66967,     0.67067,     0.67167,
+           0.67267,     0.67367,     0.67467,     0.67568,     0.67668,     0.67768,     0.67868,     0.67968,     0.68068,     0.68168,     0.68268,     0.68368,     0.68468,     0.68569,     0.68669,     0.68769,     0.68869,     0.68969,     0.69069,     0.69169,     0.69269,     0.69369,     0.69469,      0.6957,
+            0.6967,      0.6977,      0.6987,      0.6997,      0.7007,      0.7017,      0.7027,      0.7037,      0.7047,     0.70571,     0.70671,     0.70771,     0.70871,     0.70971,     0.71071,     0.71171,     0.71271,     0.71371,     0.71471,     0.71572,     0.71672,     0.71772,     0.71872,     0.71972,
+           0.72072,     0.72172,     0.72272,     0.72372,     0.72472,     0.72573,     0.72673,     0.72773,     0.72873,     0.72973,     0.73073,     0.73173,     0.73273,     0.73373,     0.73473,     0.73574,     0.73674,     0.73774,     0.73874,     0.73974,     0.74074,     0.74174,     0.74274,     0.74374,
+           0.74474,     0.74575,     0.74675,     0.74775,     0.74875,     0.74975,     0.75075,     0.75175,     0.75275,     0.75375,     0.75475,     0.75576,     0.75676,     0.75776,     0.75876,     0.75976,     0.76076,     0.76176,     0.76276,     0.76376,     0.76476,     0.76577,     0.76677,     0.76777,
+           0.76877,     0.76977,     0.77077,     0.77177,     0.77277,     0.77377,     0.77477,     0.77578,     0.77678,     0.77778,     0.77878,     0.77978,     0.78078,     0.78178,     0.78278,     0.78378,     0.78478,     0.78579,     0.78679,     0.78779,     0.78879,     0.78979,     0.79079,     0.79179,
+           0.79279,     0.79379,     0.79479,      0.7958,      0.7968,      0.7978,      0.7988,      0.7998,      0.8008,      0.8018,      0.8028,      0.8038,      0.8048,     0.80581,     0.80681,     0.80781,     0.80881,     0.80981,     0.81081,     0.81181,     0.81281,     0.81381,     0.81481,     0.81582,
+           0.81682,     0.81782,     0.81882,     0.81982,     0.82082,     0.82182,     0.82282,     0.82382,     0.82482,     0.82583,     0.82683,     0.82783,     0.82883,     0.82983,     0.83083,     0.83183,     0.83283,     0.83383,     0.83483,     0.83584,     0.83684,     0.83784,     0.83884,     0.83984,
+           0.84084,     0.84184,     0.84284,     0.84384,     0.84484,     0.84585,     0.84685,     0.84785,     0.84885,     0.84985,     0.85085,     0.85185,     0.85285,     0.85385,     0.85485,     0.85586,     0.85686,     0.85786,     0.85886,     0.85986,     0.86086,     0.86186,     0.86286,     0.86386,
+           0.86486,     0.86587,     0.86687,     0.86787,     0.86887,     0.86987,     0.87087,     0.87187,     0.87287,     0.87387,     0.87487,     0.87588,     0.87688,     0.87788,     0.87888,     0.87988,     0.88088,     0.88188,     0.88288,     0.88388,     0.88488,     0.88589,     0.88689,     0.88789,
+           0.88889,     0.88989,     0.89089,     0.89189,     0.89289,     0.89389,     0.89489,      0.8959,      0.8969,      0.8979,      0.8989,      0.8999,      0.9009,      0.9019,      0.9029,      0.9039,      0.9049,     0.90591,     0.90691,     0.90791,     0.90891,     0.90991,     0.91091,     0.91191,
+           0.91291,     0.91391,     0.91491,     0.91592,     0.91692,     0.91792,     0.91892,     0.91992,     0.92092,     0.92192,     0.92292,     0.92392,     0.92492,     0.92593,     0.92693,     0.92793,     0.92893,     0.92993,     0.93093,     0.93193,     0.93293,     0.93393,     0.93493,     0.93594,
+           0.93694,     0.93794,     0.93894,     0.93994,     0.94094,     0.94194,     0.94294,     0.94394,     0.94494,     0.94595,     0.94695,     0.94795,     0.94895,     0.94995,     0.95095,     0.95195,     0.95295,     0.95395,     0.95495,     0.95596,     0.95696,     0.95796,     0.95896,     0.95996,
+           0.96096,     0.96196,     0.96296,     0.96396,     0.96496,     0.96597,     0.96697,     0.96797,     0.96897,     0.96997,     0.97097,     0.97197,     0.97297,     0.97397,     0.97497,     0.97598,     0.97698,     0.97798,     0.97898,     0.97998,     0.98098,     0.98198,     0.98298,     0.98398,
+           0.98498,     0.98599,     0.98699,     0.98799,     0.98899,     0.98999,     0.99099,     0.99199,     0.99299,     0.99399,     0.99499,       0.996,       0.997,       0.998,       0.999,           1]), array([[    0.67463,       0.675,     0.82627,     0.85983,     0.86529,     0.87708,     0.89042,     0.89579,     0.90843,     0.91404,     0.92287,     0.92565,     0.93052,     0.93454,     0.94053,     0.94346,     0.94562,     0.94584,     0.94606,     0.94628,      0.9465,     0.94672,     0.94694,
+            0.94716,     0.94738,      0.9476,     0.94782,     0.94804,     0.94826,     0.94848,      0.9487,     0.94892,     0.94914,     0.94936,     0.94958,     0.95032,     0.95106,      0.9518,     0.95254,     0.95328,      0.9574,     0.95778,     0.95794,      0.9581,     0.95826,     0.95842,
+            0.95858,     0.95874,      0.9589,     0.95906,     0.95922,     0.95938,     0.95954,      0.9597,     0.95986,     0.96002,     0.96018,     0.96033,     0.96049,     0.96065,     0.96081,     0.96097,     0.96113,     0.96129,     0.96145,     0.96161,      0.9618,     0.96203,     0.96225,
+            0.96248,     0.96271,     0.96293,     0.96316,     0.96339,     0.96361,     0.96384,     0.96407,     0.96429,     0.96452,     0.96475,     0.96497,      0.9652,     0.96542,     0.96565,     0.96614,     0.96726,     0.96839,     0.96951,     0.97004,     0.97017,     0.97031,     0.97045,
+            0.97058,     0.97072,     0.97085,     0.97099,     0.97112,     0.97126,     0.97139,     0.97153,     0.97166,      0.9718,     0.97193,     0.97207,     0.97221,     0.97234,     0.97248,     0.97261,     0.97275,     0.97288,     0.97302,     0.97315,     0.97329,     0.97342,     0.97356,
+            0.97369,     0.97383,     0.97397,      0.9741,     0.97415,     0.97416,     0.97417,     0.97418,     0.97419,     0.97421,     0.97422,     0.97423,     0.97424,     0.97425,     0.97427,     0.97428,     0.97429,      0.9743,     0.97431,     0.97433,     0.97434,     0.97435,     0.97436,
+            0.97437,     0.97439,      0.9744,     0.97441,     0.97442,     0.97443,     0.97445,     0.97446,     0.97447,     0.97448,     0.97449,     0.97451,     0.97452,     0.97453,     0.97454,     0.97455,     0.97457,     0.97458,     0.97459,      0.9746,     0.97461,     0.97463,     0.97464,
+            0.97465,     0.97466,     0.97467,     0.97469,      0.9747,     0.97471,     0.97472,     0.97473,     0.97475,     0.97476,     0.97477,     0.97478,     0.97479,     0.97481,     0.97482,     0.97483,     0.97484,     0.97485,     0.97487,     0.97488,     0.97489,      0.9749,     0.97491,
+            0.97493,     0.97494,     0.97495,     0.97496,     0.97497,     0.97499,       0.975,     0.97501,     0.97502,     0.97503,     0.97505,     0.97506,     0.97507,     0.97508,     0.97509,     0.97511,     0.97512,     0.97513,     0.97514,     0.97515,     0.97517,     0.97518,     0.97519,
+             0.9752,     0.97521,     0.97522,     0.97524,     0.97525,     0.97526,     0.97527,     0.97528,      0.9753,     0.97531,     0.97532,     0.97533,     0.97534,     0.97536,     0.97537,     0.97538,     0.97539,      0.9754,     0.97542,     0.97543,     0.97544,     0.97545,     0.97546,
+            0.97548,     0.97549,      0.9755,     0.97551,     0.97552,     0.97554,     0.97555,     0.97556,     0.97557,     0.97558,      0.9756,     0.97561,     0.97562,     0.97563,     0.97564,     0.97566,     0.97567,     0.97568,     0.97569,      0.9757,     0.97572,     0.97573,     0.97574,
+            0.97575,     0.97576,     0.97578,     0.97579,      0.9758,     0.97581,     0.97582,     0.97584,     0.97585,     0.97586,     0.97587,     0.97588,      0.9759,     0.97591,     0.97592,     0.97593,     0.97594,     0.97596,     0.97597,     0.97598,     0.97599,       0.976,     0.97602,
+            0.97603,     0.97604,     0.97605,     0.97606,     0.97608,     0.97609,      0.9761,     0.97611,     0.97612,     0.97614,     0.97615,     0.97616,     0.97617,     0.97618,      0.9762,     0.97621,     0.97622,     0.97623,     0.97624,     0.97626,     0.97627,     0.97628,     0.97629,
+             0.9763,     0.97632,     0.97633,     0.97634,     0.97635,     0.97636,     0.97638,     0.97639,      0.9764,     0.97641,     0.97642,     0.97644,     0.97645,     0.97646,     0.97647,     0.97648,     0.97649,     0.97651,     0.97652,     0.97653,     0.97654,     0.97655,     0.97657,
+            0.97658,     0.97659,      0.9766,     0.97661,     0.97663,     0.97664,     0.97665,     0.97666,     0.97667,     0.97669,      0.9767,     0.97671,     0.97672,     0.97673,     0.97675,     0.97676,     0.97677,     0.97678,     0.97679,     0.97681,     0.97682,     0.97683,     0.97684,
+            0.97685,     0.97687,     0.97688,     0.97689,      0.9769,     0.97691,     0.97693,     0.97694,     0.97695,     0.97696,     0.97697,     0.97699,       0.977,     0.97701,     0.97702,     0.97703,     0.97705,     0.97706,     0.97707,     0.97708,     0.97709,     0.97711,     0.97712,
+            0.97713,     0.97714,     0.97715,     0.97717,     0.97718,     0.97719,      0.9772,     0.97721,     0.97723,     0.97724,     0.97725,     0.97726,     0.97727,     0.97729,      0.9773,     0.97731,     0.97732,     0.97733,     0.97735,     0.97736,     0.97737,     0.97738,     0.97739,
+            0.97741,     0.97742,     0.97743,     0.97744,     0.97745,     0.97747,     0.97748,     0.97749,      0.9775,     0.97751,     0.97753,     0.97754,     0.97755,     0.97756,     0.97757,     0.97759,      0.9776,     0.97761,     0.97762,     0.97763,     0.97765,     0.97766,     0.97767,
+            0.97768,     0.97769,     0.97771,     0.97772,     0.97773,     0.97774,     0.97775,     0.97776,     0.97778,     0.97779,      0.9778,     0.97781,     0.97782,     0.97784,     0.97785,     0.97786,     0.97787,     0.97788,      0.9779,     0.97791,     0.97792,     0.97793,     0.97794,
+            0.97796,     0.97797,     0.97798,     0.97799,       0.978,     0.97802,     0.97803,     0.97804,     0.97805,     0.97806,     0.97808,     0.97809,      0.9781,     0.97811,     0.97812,     0.97814,     0.97815,     0.97816,     0.97817,     0.97818,      0.9782,     0.97821,     0.97822,
+            0.97823,     0.97824,     0.97826,     0.97827,     0.97828,     0.97829,      0.9783,     0.97832,     0.97833,     0.97834,     0.97835,     0.97836,     0.97838,     0.97839,      0.9784,     0.97841,     0.97842,     0.97843,     0.97844,     0.97846,     0.97847,     0.97848,     0.97849,
+             0.9785,     0.97851,     0.97852,     0.97854,     0.97855,     0.97856,     0.97857,     0.97858,     0.97859,      0.9786,     0.97862,     0.97863,     0.97864,     0.97865,     0.97866,     0.97867,     0.97869,      0.9787,     0.97871,     0.97872,     0.97873,     0.97874,     0.97875,
+            0.97877,     0.97878,     0.97879,      0.9788,     0.97881,     0.97882,     0.97883,     0.97885,     0.97886,     0.97887,     0.97888,     0.97889,      0.9789,     0.97891,     0.97893,     0.97894,     0.97895,     0.97896,     0.97897,     0.97898,       0.979,     0.97901,     0.97902,
+            0.97903,     0.97904,     0.97905,     0.97906,     0.97908,     0.97909,      0.9791,     0.97911,     0.97912,     0.97913,     0.97914,     0.97916,     0.97917,     0.97918,     0.97919,      0.9792,     0.97921,     0.97922,     0.97924,     0.97925,     0.97926,     0.97927,     0.97928,
+            0.97929,     0.97931,     0.97932,     0.97933,     0.97934,     0.97935,     0.97936,     0.97937,     0.97939,      0.9794,     0.97941,     0.97942,     0.97943,     0.97944,     0.97945,     0.97947,     0.97948,     0.97949,      0.9795,     0.97951,     0.97952,     0.97953,     0.97955,
+            0.97956,     0.97957,     0.97958,     0.97959,      0.9796,     0.97962,     0.97963,     0.97964,     0.97965,     0.97966,     0.97967,     0.97968,      0.9797,     0.97971,     0.97972,     0.97973,     0.97974,     0.97975,     0.97976,     0.97978,     0.97979,      0.9798,     0.97981,
+            0.97982,     0.97983,     0.97984,     0.97986,     0.97987,     0.97988,     0.97989,      0.9799,     0.97991,     0.97993,     0.97994,     0.97995,     0.97996,     0.97997,     0.97998,     0.97999,     0.98001,     0.98002,     0.98003,     0.98004,     0.98005,     0.98006,     0.98007,
+            0.98009,      0.9801,     0.98011,     0.98012,     0.98013,     0.98014,     0.98015,     0.98017,     0.98018,     0.98019,      0.9802,     0.98021,     0.98022,     0.98024,     0.98025,     0.98026,     0.98027,     0.98028,     0.98029,      0.9803,     0.98032,     0.98033,     0.98034,
+            0.98035,     0.98036,     0.98037,     0.98038,      0.9804,     0.98041,     0.98042,     0.98043,     0.98044,     0.98045,     0.98046,     0.98048,     0.98049,      0.9805,     0.98051,     0.98052,     0.98053,     0.98055,     0.98056,     0.98057,     0.98058,     0.98059,      0.9806,
+            0.98061,     0.98063,     0.98064,     0.98065,     0.98066,     0.98067,     0.98068,     0.98069,     0.98071,     0.98072,     0.98073,     0.98074,     0.98075,     0.98076,     0.98077,     0.98079,      0.9808,     0.98081,     0.98082,     0.98083,     0.98084,     0.98086,     0.98087,
+            0.98088,     0.98089,      0.9809,     0.98091,     0.98092,     0.98094,     0.98095,     0.98096,     0.98097,     0.98098,     0.98099,       0.981,     0.98102,     0.98103,     0.98104,     0.98105,     0.98106,     0.98107,     0.98108,      0.9811,     0.98111,     0.98112,     0.98113,
+            0.98114,     0.98115,     0.98117,     0.98118,     0.98119,      0.9812,     0.98121,     0.98122,     0.98123,     0.98125,     0.98126,     0.98127,     0.98128,     0.98129,      0.9813,     0.98131,     0.98133,     0.98134,     0.98135,     0.98136,     0.98137,     0.98138,     0.98139,
+            0.98141,     0.98142,     0.98143,     0.98144,     0.98145,     0.98146,     0.98148,     0.98149,      0.9815,     0.98151,     0.98152,     0.98153,     0.98154,     0.98156,     0.98157,     0.98158,     0.98159,      0.9816,     0.98161,     0.98162,     0.98164,     0.98165,     0.98166,
+            0.98167,     0.98168,     0.98169,      0.9817,     0.98172,     0.98173,     0.98174,     0.98175,     0.98176,     0.98177,     0.98179,      0.9818,     0.98181,     0.98182,     0.98183,     0.98184,     0.98185,     0.98187,     0.98188,     0.98189,      0.9819,     0.98191,     0.98192,
+            0.98193,     0.98195,     0.98196,     0.98197,     0.98198,     0.98199,       0.982,     0.98201,     0.98203,     0.98204,     0.98205,     0.98206,     0.98207,     0.98208,      0.9821,     0.98211,     0.98212,     0.98213,     0.98214,     0.98215,     0.98216,     0.98218,     0.98219,
+             0.9822,     0.98221,     0.98222,     0.98223,     0.98224,     0.98226,     0.98227,     0.98228,     0.98229,      0.9823,     0.98231,     0.98232,     0.98234,     0.98235,     0.98236,     0.98237,     0.98238,     0.98239,     0.98241,     0.98242,     0.98243,     0.98244,     0.98245,
+            0.98246,     0.98247,     0.98249,      0.9825,     0.98251,     0.98252,     0.98253,     0.98254,     0.98255,     0.98257,     0.98258,     0.98259,      0.9826,      0.9826,     0.98256,     0.98253,     0.98251,      0.9825,     0.98248,     0.98247,     0.98246,     0.98245,     0.98244,
+            0.98243,     0.98242,     0.98241,     0.98241,      0.9824,     0.98239,     0.98238,     0.98238,     0.98237,     0.98237,     0.98236,     0.98236,     0.98235,     0.98235,     0.98235,     0.98234,     0.98234,     0.98233,     0.98233,     0.98233,     0.98232,     0.98232,     0.98231,
+            0.98231,     0.98231,      0.9823,      0.9823,      0.9823,      0.9823,     0.98229,     0.98229,     0.98229,     0.98229,     0.98229,     0.98228,     0.98228,     0.98228,     0.98228,     0.98228,     0.98227,     0.98227,     0.98227,     0.98227,     0.98227,     0.98226,     0.98226,
+            0.98226,     0.98226,     0.98226,     0.98225,     0.98225,     0.98225,     0.98225,     0.98225,     0.98224,     0.98224,     0.98224,     0.98224,     0.98224,     0.98223,     0.98223,     0.98223,     0.98223,     0.98223,     0.98223,     0.98222,     0.98212,     0.98204,     0.98198,
+            0.98192,     0.98182,     0.98174,     0.98164,     0.98162,     0.98161,     0.98159,     0.98158,     0.98563,     0.99065,     0.99062,     0.99059,     0.99057,     0.99056,     0.99056,     0.99056,     0.99055,     0.99055,     0.99054,     0.99054,     0.99054,     0.99053,     0.99053,
+            0.99053,     0.99052,     0.99051,     0.99048,     0.99044,     0.99516,     0.99512,      0.9951,     0.99505,     0.99502,     0.99496,     0.99484,      0.9948,     0.99473,     0.99469,     0.99458,     0.99599,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1]]), 'Confidence', 'Precision'], [array([          0,    0.001001,    0.002002,    0.003003,    0.004004,    0.005005,    0.006006,    0.007007,    0.008008,    0.009009,     0.01001,    0.011011,    0.012012,    0.013013,    0.014014,    0.015015,    0.016016,    0.017017,    0.018018,    0.019019,     0.02002,    0.021021,    0.022022,    0.023023,
+          0.024024,    0.025025,    0.026026,    0.027027,    0.028028,    0.029029,     0.03003,    0.031031,    0.032032,    0.033033,    0.034034,    0.035035,    0.036036,    0.037037,    0.038038,    0.039039,     0.04004,    0.041041,    0.042042,    0.043043,    0.044044,    0.045045,    0.046046,    0.047047,
+          0.048048,    0.049049,     0.05005,    0.051051,    0.052052,    0.053053,    0.054054,    0.055055,    0.056056,    0.057057,    0.058058,    0.059059,     0.06006,    0.061061,    0.062062,    0.063063,    0.064064,    0.065065,    0.066066,    0.067067,    0.068068,    0.069069,     0.07007,    0.071071,
+          0.072072,    0.073073,    0.074074,    0.075075,    0.076076,    0.077077,    0.078078,    0.079079,     0.08008,    0.081081,    0.082082,    0.083083,    0.084084,    0.085085,    0.086086,    0.087087,    0.088088,    0.089089,     0.09009,    0.091091,    0.092092,    0.093093,    0.094094,    0.095095,
+          0.096096,    0.097097,    0.098098,    0.099099,      0.1001,      0.1011,      0.1021,      0.1031,      0.1041,     0.10511,     0.10611,     0.10711,     0.10811,     0.10911,     0.11011,     0.11111,     0.11211,     0.11311,     0.11411,     0.11512,     0.11612,     0.11712,     0.11812,     0.11912,
+           0.12012,     0.12112,     0.12212,     0.12312,     0.12412,     0.12513,     0.12613,     0.12713,     0.12813,     0.12913,     0.13013,     0.13113,     0.13213,     0.13313,     0.13413,     0.13514,     0.13614,     0.13714,     0.13814,     0.13914,     0.14014,     0.14114,     0.14214,     0.14314,
+           0.14414,     0.14515,     0.14615,     0.14715,     0.14815,     0.14915,     0.15015,     0.15115,     0.15215,     0.15315,     0.15415,     0.15516,     0.15616,     0.15716,     0.15816,     0.15916,     0.16016,     0.16116,     0.16216,     0.16316,     0.16416,     0.16517,     0.16617,     0.16717,
+           0.16817,     0.16917,     0.17017,     0.17117,     0.17217,     0.17317,     0.17417,     0.17518,     0.17618,     0.17718,     0.17818,     0.17918,     0.18018,     0.18118,     0.18218,     0.18318,     0.18418,     0.18519,     0.18619,     0.18719,     0.18819,     0.18919,     0.19019,     0.19119,
+           0.19219,     0.19319,     0.19419,      0.1952,      0.1962,      0.1972,      0.1982,      0.1992,      0.2002,      0.2012,      0.2022,      0.2032,      0.2042,     0.20521,     0.20621,     0.20721,     0.20821,     0.20921,     0.21021,     0.21121,     0.21221,     0.21321,     0.21421,     0.21522,
+           0.21622,     0.21722,     0.21822,     0.21922,     0.22022,     0.22122,     0.22222,     0.22322,     0.22422,     0.22523,     0.22623,     0.22723,     0.22823,     0.22923,     0.23023,     0.23123,     0.23223,     0.23323,     0.23423,     0.23524,     0.23624,     0.23724,     0.23824,     0.23924,
+           0.24024,     0.24124,     0.24224,     0.24324,     0.24424,     0.24525,     0.24625,     0.24725,     0.24825,     0.24925,     0.25025,     0.25125,     0.25225,     0.25325,     0.25425,     0.25526,     0.25626,     0.25726,     0.25826,     0.25926,     0.26026,     0.26126,     0.26226,     0.26326,
+           0.26426,     0.26527,     0.26627,     0.26727,     0.26827,     0.26927,     0.27027,     0.27127,     0.27227,     0.27327,     0.27427,     0.27528,     0.27628,     0.27728,     0.27828,     0.27928,     0.28028,     0.28128,     0.28228,     0.28328,     0.28428,     0.28529,     0.28629,     0.28729,
+           0.28829,     0.28929,     0.29029,     0.29129,     0.29229,     0.29329,     0.29429,      0.2953,      0.2963,      0.2973,      0.2983,      0.2993,      0.3003,      0.3013,      0.3023,      0.3033,      0.3043,     0.30531,     0.30631,     0.30731,     0.30831,     0.30931,     0.31031,     0.31131,
+           0.31231,     0.31331,     0.31431,     0.31532,     0.31632,     0.31732,     0.31832,     0.31932,     0.32032,     0.32132,     0.32232,     0.32332,     0.32432,     0.32533,     0.32633,     0.32733,     0.32833,     0.32933,     0.33033,     0.33133,     0.33233,     0.33333,     0.33433,     0.33534,
+           0.33634,     0.33734,     0.33834,     0.33934,     0.34034,     0.34134,     0.34234,     0.34334,     0.34434,     0.34535,     0.34635,     0.34735,     0.34835,     0.34935,     0.35035,     0.35135,     0.35235,     0.35335,     0.35435,     0.35536,     0.35636,     0.35736,     0.35836,     0.35936,
+           0.36036,     0.36136,     0.36236,     0.36336,     0.36436,     0.36537,     0.36637,     0.36737,     0.36837,     0.36937,     0.37037,     0.37137,     0.37237,     0.37337,     0.37437,     0.37538,     0.37638,     0.37738,     0.37838,     0.37938,     0.38038,     0.38138,     0.38238,     0.38338,
+           0.38438,     0.38539,     0.38639,     0.38739,     0.38839,     0.38939,     0.39039,     0.39139,     0.39239,     0.39339,     0.39439,      0.3954,      0.3964,      0.3974,      0.3984,      0.3994,      0.4004,      0.4014,      0.4024,      0.4034,      0.4044,     0.40541,     0.40641,     0.40741,
+           0.40841,     0.40941,     0.41041,     0.41141,     0.41241,     0.41341,     0.41441,     0.41542,     0.41642,     0.41742,     0.41842,     0.41942,     0.42042,     0.42142,     0.42242,     0.42342,     0.42442,     0.42543,     0.42643,     0.42743,     0.42843,     0.42943,     0.43043,     0.43143,
+           0.43243,     0.43343,     0.43443,     0.43544,     0.43644,     0.43744,     0.43844,     0.43944,     0.44044,     0.44144,     0.44244,     0.44344,     0.44444,     0.44545,     0.44645,     0.44745,     0.44845,     0.44945,     0.45045,     0.45145,     0.45245,     0.45345,     0.45445,     0.45546,
+           0.45646,     0.45746,     0.45846,     0.45946,     0.46046,     0.46146,     0.46246,     0.46346,     0.46446,     0.46547,     0.46647,     0.46747,     0.46847,     0.46947,     0.47047,     0.47147,     0.47247,     0.47347,     0.47447,     0.47548,     0.47648,     0.47748,     0.47848,     0.47948,
+           0.48048,     0.48148,     0.48248,     0.48348,     0.48448,     0.48549,     0.48649,     0.48749,     0.48849,     0.48949,     0.49049,     0.49149,     0.49249,     0.49349,     0.49449,      0.4955,      0.4965,      0.4975,      0.4985,      0.4995,      0.5005,      0.5015,      0.5025,      0.5035,
+            0.5045,     0.50551,     0.50651,     0.50751,     0.50851,     0.50951,     0.51051,     0.51151,     0.51251,     0.51351,     0.51451,     0.51552,     0.51652,     0.51752,     0.51852,     0.51952,     0.52052,     0.52152,     0.52252,     0.52352,     0.52452,     0.52553,     0.52653,     0.52753,
+           0.52853,     0.52953,     0.53053,     0.53153,     0.53253,     0.53353,     0.53453,     0.53554,     0.53654,     0.53754,     0.53854,     0.53954,     0.54054,     0.54154,     0.54254,     0.54354,     0.54454,     0.54555,     0.54655,     0.54755,     0.54855,     0.54955,     0.55055,     0.55155,
+           0.55255,     0.55355,     0.55455,     0.55556,     0.55656,     0.55756,     0.55856,     0.55956,     0.56056,     0.56156,     0.56256,     0.56356,     0.56456,     0.56557,     0.56657,     0.56757,     0.56857,     0.56957,     0.57057,     0.57157,     0.57257,     0.57357,     0.57457,     0.57558,
+           0.57658,     0.57758,     0.57858,     0.57958,     0.58058,     0.58158,     0.58258,     0.58358,     0.58458,     0.58559,     0.58659,     0.58759,     0.58859,     0.58959,     0.59059,     0.59159,     0.59259,     0.59359,     0.59459,      0.5956,      0.5966,      0.5976,      0.5986,      0.5996,
+            0.6006,      0.6016,      0.6026,      0.6036,      0.6046,     0.60561,     0.60661,     0.60761,     0.60861,     0.60961,     0.61061,     0.61161,     0.61261,     0.61361,     0.61461,     0.61562,     0.61662,     0.61762,     0.61862,     0.61962,     0.62062,     0.62162,     0.62262,     0.62362,
+           0.62462,     0.62563,     0.62663,     0.62763,     0.62863,     0.62963,     0.63063,     0.63163,     0.63263,     0.63363,     0.63463,     0.63564,     0.63664,     0.63764,     0.63864,     0.63964,     0.64064,     0.64164,     0.64264,     0.64364,     0.64464,     0.64565,     0.64665,     0.64765,
+           0.64865,     0.64965,     0.65065,     0.65165,     0.65265,     0.65365,     0.65465,     0.65566,     0.65666,     0.65766,     0.65866,     0.65966,     0.66066,     0.66166,     0.66266,     0.66366,     0.66466,     0.66567,     0.66667,     0.66767,     0.66867,     0.66967,     0.67067,     0.67167,
+           0.67267,     0.67367,     0.67467,     0.67568,     0.67668,     0.67768,     0.67868,     0.67968,     0.68068,     0.68168,     0.68268,     0.68368,     0.68468,     0.68569,     0.68669,     0.68769,     0.68869,     0.68969,     0.69069,     0.69169,     0.69269,     0.69369,     0.69469,      0.6957,
+            0.6967,      0.6977,      0.6987,      0.6997,      0.7007,      0.7017,      0.7027,      0.7037,      0.7047,     0.70571,     0.70671,     0.70771,     0.70871,     0.70971,     0.71071,     0.71171,     0.71271,     0.71371,     0.71471,     0.71572,     0.71672,     0.71772,     0.71872,     0.71972,
+           0.72072,     0.72172,     0.72272,     0.72372,     0.72472,     0.72573,     0.72673,     0.72773,     0.72873,     0.72973,     0.73073,     0.73173,     0.73273,     0.73373,     0.73473,     0.73574,     0.73674,     0.73774,     0.73874,     0.73974,     0.74074,     0.74174,     0.74274,     0.74374,
+           0.74474,     0.74575,     0.74675,     0.74775,     0.74875,     0.74975,     0.75075,     0.75175,     0.75275,     0.75375,     0.75475,     0.75576,     0.75676,     0.75776,     0.75876,     0.75976,     0.76076,     0.76176,     0.76276,     0.76376,     0.76476,     0.76577,     0.76677,     0.76777,
+           0.76877,     0.76977,     0.77077,     0.77177,     0.77277,     0.77377,     0.77477,     0.77578,     0.77678,     0.77778,     0.77878,     0.77978,     0.78078,     0.78178,     0.78278,     0.78378,     0.78478,     0.78579,     0.78679,     0.78779,     0.78879,     0.78979,     0.79079,     0.79179,
+           0.79279,     0.79379,     0.79479,      0.7958,      0.7968,      0.7978,      0.7988,      0.7998,      0.8008,      0.8018,      0.8028,      0.8038,      0.8048,     0.80581,     0.80681,     0.80781,     0.80881,     0.80981,     0.81081,     0.81181,     0.81281,     0.81381,     0.81481,     0.81582,
+           0.81682,     0.81782,     0.81882,     0.81982,     0.82082,     0.82182,     0.82282,     0.82382,     0.82482,     0.82583,     0.82683,     0.82783,     0.82883,     0.82983,     0.83083,     0.83183,     0.83283,     0.83383,     0.83483,     0.83584,     0.83684,     0.83784,     0.83884,     0.83984,
+           0.84084,     0.84184,     0.84284,     0.84384,     0.84484,     0.84585,     0.84685,     0.84785,     0.84885,     0.84985,     0.85085,     0.85185,     0.85285,     0.85385,     0.85485,     0.85586,     0.85686,     0.85786,     0.85886,     0.85986,     0.86086,     0.86186,     0.86286,     0.86386,
+           0.86486,     0.86587,     0.86687,     0.86787,     0.86887,     0.86987,     0.87087,     0.87187,     0.87287,     0.87387,     0.87487,     0.87588,     0.87688,     0.87788,     0.87888,     0.87988,     0.88088,     0.88188,     0.88288,     0.88388,     0.88488,     0.88589,     0.88689,     0.88789,
+           0.88889,     0.88989,     0.89089,     0.89189,     0.89289,     0.89389,     0.89489,      0.8959,      0.8969,      0.8979,      0.8989,      0.8999,      0.9009,      0.9019,      0.9029,      0.9039,      0.9049,     0.90591,     0.90691,     0.90791,     0.90891,     0.90991,     0.91091,     0.91191,
+           0.91291,     0.91391,     0.91491,     0.91592,     0.91692,     0.91792,     0.91892,     0.91992,     0.92092,     0.92192,     0.92292,     0.92392,     0.92492,     0.92593,     0.92693,     0.92793,     0.92893,     0.92993,     0.93093,     0.93193,     0.93293,     0.93393,     0.93493,     0.93594,
+           0.93694,     0.93794,     0.93894,     0.93994,     0.94094,     0.94194,     0.94294,     0.94394,     0.94494,     0.94595,     0.94695,     0.94795,     0.94895,     0.94995,     0.95095,     0.95195,     0.95295,     0.95395,     0.95495,     0.95596,     0.95696,     0.95796,     0.95896,     0.95996,
+           0.96096,     0.96196,     0.96296,     0.96396,     0.96496,     0.96597,     0.96697,     0.96797,     0.96897,     0.96997,     0.97097,     0.97197,     0.97297,     0.97397,     0.97497,     0.97598,     0.97698,     0.97798,     0.97898,     0.97998,     0.98098,     0.98198,     0.98298,     0.98398,
+           0.98498,     0.98599,     0.98699,     0.98799,     0.98899,     0.98999,     0.99099,     0.99199,     0.99299,     0.99399,     0.99499,       0.996,       0.997,       0.998,       0.999,           1]), array([[          1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,
+                  1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,           1,     0.99932,     0.99696,     0.99524,     0.99443,     0.99362,     0.99281,     0.99199,     0.99118,     0.99069,      0.9902,
+            0.98972,     0.98923,     0.98875,     0.98827,     0.98778,      0.9873,     0.98682,     0.98653,      0.9863,     0.98607,     0.98583,      0.9856,     0.98536,     0.98513,     0.98489,     0.98466,     0.98442,     0.98419,     0.98395,     0.98372,     0.98349,     0.98325,     0.98302,
+            0.98278,     0.98255,     0.98231,      0.9822,     0.98209,     0.98198,     0.98187,     0.98176,     0.98165,     0.98154,     0.98143,     0.98132,     0.98121,      0.9811,     0.98099,     0.98088,     0.98078,     0.98067,     0.98056,     0.98045,     0.98034,     0.98023,     0.98012,
+            0.98001,      0.9799,     0.97979,     0.97968,     0.97957,     0.97946,     0.97935,     0.97924,     0.97913,     0.97903,     0.97892,     0.97881,      0.9787,     0.97859,     0.97848,     0.97837,     0.97826,     0.97815,     0.97804,     0.97793,     0.97234,     0.96764,     0.96465,
+            0.96132,     0.95579,     0.95145,     0.94614,     0.94533,     0.94453,     0.94372,     0.94292,     0.94248,     0.93743,     0.93435,     0.93187,     0.92959,      0.9289,     0.92854,     0.92818,     0.92782,     0.92745,     0.92709,     0.92673,     0.92637,       0.926,     0.92564,
+            0.92528,     0.92492,     0.92333,     0.92098,     0.91667,     0.91032,     0.90197,       0.899,     0.88957,     0.88341,     0.87309,     0.85368,     0.84653,     0.83492,     0.82954,     0.81205,     0.80531,     0.79402,     0.77226,     0.75662,     0.74106,     0.72001,     0.70367,
+            0.68413,     0.66854,     0.65878,      0.6473,      0.6319,     0.58065,      0.5616,     0.52126,     0.48408,     0.41887,     0.33393,     0.24589,     0.17487,     0.14733,     0.10937,    0.083442,    0.052169,    0.041157,    0.028736,     0.02118,    0.017393,    0.015218,    0.010991,
+          0.0059036,           0,           0,           0,           0,           0,           0,           0,           0,           0,           0]]), 'Confidence', 'Recall']]
+fitness: 0.9905771302562452
+keys: ['metrics/precision(B)', 'metrics/recall(B)', 'metrics/mAP50(B)', 'metrics/mAP50-95(B)']
+maps: array([    0.99028])
+names: {0: 'table'}
+plot: True
+results_dict: {'metrics/precision(B)': 0.9820378991445408, 'metrics/recall(B)': 1.0, 'metrics/mAP50(B)': 0.9932757838520232, 'metrics/mAP50-95(B)': 0.9902772798567142, 'fitness': 0.9905771302562452}
+save_dir: PosixPath('runs/detect/train52')
+speed: {'preprocess': 0.11965738875525338, 'inference': 9.744493024689811, 'loss': 0.0017870749746050154, 'postprocess': 0.6383625524384635}
+task: 'detect'
+precision =  0.9820378991445408
+recall =  1.0
+f1_score =  0.9909375593356657
+Salvando o modelo completo via model.export()...
+Ultralytics YOLOv8.0.239 🚀 Python-3.12.3 torch-2.2.2 CUDA:0 (NVIDIA RTX 6000 Ada Generation, 48647MiB)
+
+PyTorch: starting from 'runs/detect/train5/weights/best.pt' with input shape (1, 3, 640, 640) BCHW and output shape(s) (1, 5, 8400) (6.0 MB)
+
+TorchScript: starting export with torch 2.2.2...
+TorchScript: export success ✅ 0.9s, saved as 'runs/detect/train5/weights/best.torchscript' (11.9 MB)
+
+Export complete (1.0s)
+Results saved to /home/aluno-pbarroso/pytorch-pbarroso/YOLOFT/Model/runs/detect/train5/weights
+Predict:         yolo predict task=detect model=runs/detect/train5/weights/best.torchscript imgsz=640  
+Validate:        yolo val task=detect model=runs/detect/train5/weights/best.torchscript imgsz=640 data=/home/aluno-pbarroso/pytorch-pbarroso/YOLOFT/main/yolo.yaml  
+Visualize:       https://netron.app
+
+Duration: 14 minutes
+
+CENÁRIO 4: YOLO w/Lora - R=8 / Head, Neck and Backbone w/3 last ranges
+Salvo em: /home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/checkpoints/YOLO_LORA_CENARIO04_071125.pt
+
