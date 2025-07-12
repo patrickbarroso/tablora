@@ -166,19 +166,11 @@ cppe5["train"] = cppe5["train"].with_transform(train_transform_batch)
 cppe5["validation"] = cppe5["validation"].with_transform(validation_transform_batch)
 cppe5["test"] = cppe5["test"].with_transform(validation_transform_batch)
 
-# Exibe um exemplo do dataset
-#print(cppe5["train"][0])
-
 # ========================================================
 # Configuração dos Checkpoints e Custom Trainer
 # ========================================================
 CHECKPOINTS = [
-#    "microsoft/table-transformer-structure-recognition", #modelo BASICO sem LORA
-    '/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/030725P2',
-    '/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/050725P3',
-#    '/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/070725P2', #modelo sem LORA
-    '/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/060725P1'
-#    '/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/LORA/070725P1', #modelo sem LORA
+#    !!!!! INPUT CHECKPOINTS PATH HERE !!!
 ]
 
 class CustomTrainer(Trainer):
@@ -239,7 +231,7 @@ def objective(trial):
         model = model.to(device)
         
         # Diretório de saída para este fold
-        dir_out_model = f"/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/model/CV_FASE3/trial_{trial.number}_fold{fold}"
+        dir_out_model = f"/PATH_TO_CROSS_VALIDATION_PROCESS/trial_{trial.number}_fold{fold}"
         
         training_args = TrainingArguments(
             output_dir=dir_out_model,
@@ -263,7 +255,7 @@ def objective(trial):
             push_to_hub=False,
             report_to="none",
             logging_strategy="epoch",
-            logging_dir="/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/logs",
+            logging_dir="/PATH_TO_LOGS/logs",
             gradient_accumulation_steps=GRAD_ACUM_STEPS,
             label_names=['labels'],
             save_safetensors=False, # Força a geração do pytorch_model.bin 
