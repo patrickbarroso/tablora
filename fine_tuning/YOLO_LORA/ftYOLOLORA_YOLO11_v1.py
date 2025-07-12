@@ -13,7 +13,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/main/yoloft.log"),
+        logging.FileHandler("/ROOT_YOLO/yoloft.log"),
         logging.StreamHandler()
     ]
 )
@@ -22,14 +22,14 @@ logging.basicConfig(
 start_time = time.time()
 
 cenario = "YOLO11n_LORA_23062025SP5"
-path_modelo_ajustado = f'/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/Model/'
-arquivo_yolo_yaml = '/home/aluno-pbarroso/pytorch-pbarroso/FT_YOLO_LORA/main/yolo.yaml'
+path_modelo_ajustado = f'/ROOT_YOLO_LORA/Model/'
+arquivo_yolo_yaml = '/ROOT_YOLO_LORA/yolo.yaml'
 
 # Configuração do dispositivo
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 print(f"Usando dispositivo: {device}")
 
-YOLO11N = '/home/aluno-pbarroso/yolo11n.pt'
+YOLO11N = '/ROOT_YOLO_MODEL/yolo11n.pt'
 
 # Carregar modelo YOLO 11
 try:
