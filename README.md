@@ -10,7 +10,7 @@ To deploy this pipeline in an operational environment, both models are encapsula
 
 ### Key Features
 
-- ✅ **YOLO Model**: Performs bounding box detection of tables on full images.
+- ✅ **YOLOv11 Model**: Performs bounding box detection of tables on full images.
 - ✅ **TATR Model**: Processes each table region to infer fine-grained structure (rows, columns, headers, etc.).
 - ✅ **Flask API**: Provides a simple UI for uploading images and visualizing predictions.
 - ✅ **GPU & CPU support**: Automatically selects the best backend available for real-time inference.
@@ -71,7 +71,7 @@ yolo_<filename>.jpg → image with detected table regions
 tatr_<filename>.jpg → image with detailed structure annotations
 
 🧠 Models
-YOLOv8: Finetuned with LoRA for detecting table boundaries.
+YOLOv11: Finetuned with LoRA for detecting table boundaries.
 TATR (Table Transformer): Finetuned with LoRA for table structural recognition.
 Models are loaded once and reused across all inferences, minimizing loading overhead and enabling near real-time processing.
 
@@ -88,7 +88,7 @@ ultralytics
 This project is licensed under the MIT License. See LICENSE for details.
 
 🙌 Acknowledgements
-Ultralytics YOLOv8
+Ultralytics yOLOv11
 
 Table Transformer by Microsoft
 
