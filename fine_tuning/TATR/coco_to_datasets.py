@@ -5,25 +5,14 @@ from PIL import Image
 from datasets import Dataset, DatasetDict
 
 # Caminhos dos diretórios
-JSON_PATH = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/DATASET/"
-IMAGENS_ALL = "/home/aluno-pbarroso/pytorch-pbarroso/DATASET/ALL_IMG"
-XML_ALL = "/home/aluno-pbarroso/pytorch-pbarroso/DATASET/ALL_XML"
-IMAGENS_LAB01 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/images_lab01"
-IMAGENS_LAB01_FASE2 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/images_lab01_fase2"
-XML_LAB01 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/xml_lab01"
-XML_LAB01_FASE2 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/xml_lab01_fase2"
+JSON_PATH = "/JSON_PATH_DIRECTORY/"
+IMAGENS_ALL = "/ALL_IMG_DIRECTORY"
+XML_ALL = "/ALL_PASCAL_VOC_XML_DIRECTORY"
 
 QTD_TEST = 30
 
-JSON_PATH_FASE2 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/"
-IMAGENS_ALL_FASE2 = "/home/aluno-pbarroso/pytorch-pbarroso/DATASET/ALL_IMG/"
-#XML_ALL_FASE2 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/DATASET/train/xml_all_fase2"
-
-output_json = "/home/aluno-pbarroso/pytorch-pbarroso/DATASET/annotations_coco_datasets_tratado.json"
-output_json_fase2 = "/home/aluno-pbarroso/pytorch-pbarroso/DATASET/annotations_coco_datasets_fase2_v2.json"
-output_json_lab01 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/annotations_coco_datasets_lab01.json" 
-output_json_lab01_fase2 = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/annotations_coco_datasets_lab01_fase2.json" 
-
+output_json = "/JSON_PATH_DIRECTORY/coco_phase1.json"
+output_json_fase2 = "/JSON_PATH_DIRECTORY/coco_phase2.json"
 
 # Categorias para COCO
 categories_map = [
@@ -159,20 +148,6 @@ def load_coco_dataset_OLD(output_json, image_dir):
         'height': [entry['height'] for entry in image_data],
         'objects': [entry['objects'] for entry in image_data],
     })
-
-    '''
-    # Dividir em train, validation e test
-    split = dataset.train_test_split(test_size=0.30, seed=1337)
-    train_dataset = split['train']
-    validation_dataset = split['test']
-
-    # Criar DatasetDict
-    dataset_dict = DatasetDict({
-        'train': train_dataset,
-        'validation': validation_dataset,
-    })
-
-    '''
 
     # Embaralhar o dataset para garantir aleatoriedade
     shuffled_dataset = dataset.shuffle(seed=1337)
@@ -503,7 +478,6 @@ def indent_coco(arquivo_entrada, arquivo_saida):
 '''
 # Criar o JSON COCO
 coco_json = create_coco_json(IMAGENS_ALL, XML_ALL, categories_map)
-coco_json = create_coco_json(IMAGENS_LAB01, XML_LAB01, categories_map)
 
 # Salvar o arquivo JSON
 with open(output_json_lab1, "w") as f:
@@ -513,37 +487,6 @@ with open(output_json_lab1, "w") as f:
 
 # Carregar o dataset
 cppe5 = load_coco_dataset(output_json, IMAGENS_ALL, train_size=535, QTD_VALIDATION=30)
-cppe5 = load_coco_dataset2(output_json_lab1, IMAGENS_LAB01, train_size=70, QTD_VALIDATION=20)
-
-
-#novo formato!!!!! (train = 70% , test = 15%, val = 15%)
-cppe5 = load_coco_dataset_full(output_json, IMAGENS_ALL)
-
-# Visualizar o dataset
-print(cppe5)
-print(cppe5["train"][0]["image_id"])
-print(cppe5["validation"][0]["image_id"])
-print(cppe5["test"][0]["image_id"])
-
-
-#PROCESSO DE CRIACAO DE ARQUIVO JSON COCO PARA UM DETERMINADO LABORATORIO
-# Criar o JSON COCO
-coco_json = create_coco_json(IMAGENS_LAB01_FASE2, XML_LAB01_FASE2, categories_map)
-
-# Salvar o arquivo JSON
-with open(output_json_lab01_fase2, "w") as f:
-    json.dump(coco_json, f)
-
-print(f"COCO JSON criado em {output_json}")
-
-#CARREGANDO ARQUIVO COCO
-cppe5 = load_coco_dataset_full(output_json_lab01_fase2, IMAGENS_LAB01_FASE2)
-print(cppe5)
-
-#CRIAR ARQUIVO IDENTADO
-output_json_lab01_fase2_indent = "/home/aluno-pbarroso/pytorch-pbarroso/FT_TATR_STRUCTURE/dataset/train/annotations_coco_datasets_lab01_fase2_ident.json"
-indent_coco(output_json_lab01_fase2, output_json_lab01_fase2_indent)
-
 
 '''
 
