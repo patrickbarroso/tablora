@@ -8,7 +8,7 @@ import numpy as np
 
 ########### CARREGAR VARIAVEIS CONFIG ###############
 config = configparser.ConfigParser()
-config.read('/home/aluno-pbarroso/pytorch-pbarroso/ft_tatr/config.ini')
+config.read('/ROOT_PATH/config.ini')
 ROOT_CERT_IN = config['DEFAULT']['caminho_absoluto_certificados_in']
 ROOT_CERT_OUT = config['DEFAULT']['caminho_absoluto_certificados_out']
 #ARQ1_PATH = config['DEFAULT']['caminho_arq_1']
@@ -124,10 +124,7 @@ def renomear_arquivos(pasta_origem, pasta_dest, prefixo):
         contador += 1
 
 # Exemplo de uso
-lab = "LAB_02_PRESERTEC/"
-#caminho_entrada = ROOT_CERT_OUT + lab + "png/LAB01_001.png"
-#caminho_saida = ROOT_CERT_OUT + lab + "jpg/LAB01_001.jpg"
-#converter_png_para_jpg(caminho_entrCDada, caminho_saida)
+lab = "LAB_02/"
 
 #pasta_entrada = ROOT_CERT_IN + lab + "img/"
 pasta_entrada = ROOT_CERT_OUT + lab + "png/"
@@ -140,13 +137,3 @@ for file in os.listdir(pasta_saida):
   #print(file)
   converter_png_para_jpg(pasta_saida + file, pasta_jpg + file.replace("png", "jpg"))
 
-
-'''
-dfFiles = listFiles(ROOT_CERT_IN, lab)
-for path, pages in zip(dfFiles["PATH"], dfFiles["QTDPAGES"]):
-  #print("caminho = " + path + ", qtdpages = " + str(pages) + " ")
-  for i in range(int(pages)):
-    imgOUT = path.replace(".pdf", "_" + str(i+1) + ".png")
-    pdf_page_to_png(path, i+1, imgOUT)
-    print("imagem gerada = " + imgOUT)  more 
-'''
