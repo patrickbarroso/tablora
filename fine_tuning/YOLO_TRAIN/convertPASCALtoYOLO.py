@@ -80,8 +80,8 @@ def converter_pasta_pascal_para_yolo(diretorio, destino):
             cont +=1
     
 
-diretorio_PASCAL = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/ALL_PASCAL_VOC'
-diretorio_YOLO = '/home/aluno-pbarroso/pytorch-pbarroso/DATASET/ALL_YOLO'
+diretorio_PASCAL = '/ROOT_PATH/DATASET/ALL_PASCAL_VOC'
+diretorio_YOLO = '/ROOT_PATH/DATASET/ALL_YOLO'
 
 #images = glob.glob(diretorio_PASCAL + '/*.xml')
 #print("passou...")
