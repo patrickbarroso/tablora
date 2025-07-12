@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Detecção de Tabela com YOLO + TATR</title>
+</head>
+<body>
+  <h1>Envie uma Imagem de Tabela</h1>
+  <form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Enviar</button>
+  </form>
+
+  {% if yolo_image %}
+    <h2>Resultado YOLO</h2>
+    <img src="{{ url_for('static', filename='saida/' + yolo_image.split('/')[-1]) }}" width="600">
+  {% endif %}
+
+  {% if tatr_image %}
+    <h2>Resultado TATR</h2>
+    <img src="{{ url_for('static', filename='saida/' + tatr_image.split('/')[-1]) }}" width="600">
+  {% endif %}
+</body>
+</html>
