@@ -1,0 +1,6 @@
+train: /home/aluno-pbarroso/pytorch-pbarroso/DATASET/train/images
+val: /home/aluno-pbarroso/pytorch-pbarroso/DATASET/val/images
+base_path: /home/aluno-pbarroso/pytorch-pbarroso/DATASET/
+
+nc: 1  # número de classes (WBC, RBC, Platelets)
+names: ['table']  # nomes das classes
